@@ -1,0 +1,17 @@
+{
+  "name": "@apilki/ozon-seller",
+  "version": "0.3.0",
+  "description": "OpenAPI client for @apilki/ozon-seller",
+  "main": "./dist/index.js",
+  "module": "./dist/esm/index.js",
+  "typings": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apilki/ozon-seller-typescript"
+  }
+}
