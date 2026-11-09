@@ -4,7 +4,7 @@ exports.shared = exports.configure = exports.redact = exports.ApiError = exports
 /**
  * Рукописное ядро клиента @apilki/ozon.
  *
- * Четыре модуля контракта (requirements:86 п.1): `auth`, `http`, `errors`,
+ * Четыре модуля: `auth`, `http`, `errors`,
  * `rate-limit`. Ядро не зависит от сгенерированного кода: `typecheck` проходит
  * на чистом клоне, где `output/` ещё нет. Сшивка «ядро + API-классы» — `wiring.ts`.
  */

@@ -4,10 +4,8 @@ exports.createHttpFetch = exports.DEFAULT_TIMEOUT_MS = exports.DEFAULT_RETRY = e
 /**
  * `@apilki/core` — общее рукописное ядро клиентов @apilki.
  *
- * Четыре модуля по контракту (requirements:86 п.1): `auth`, `http`, `errors`,
- * `rate-limit`. Ядро не знает ни одного вендора: конверты ошибок, разбор
- * токенов и песочницы живут в клиентах. В реестр пакет не публикуется — едет
- * бандлом внутрь каждого клиента.
+ * Четыре модуля: `auth`, `http`, `errors`, `rate-limit`. Ядро не знает ни одного
+ * вендора: конверты ошибок, разбор токенов и песочницы живут в клиентах.
  */
 exports.CORE_VERSION = '0.1.0';
 var auth_ts_1 = require("./auth.js");
