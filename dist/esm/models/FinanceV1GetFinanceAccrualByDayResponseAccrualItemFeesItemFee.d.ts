@@ -23,6 +23,12 @@ export interface FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFee {
      */
     fees?: Array<FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeFee>;
     /**
+     * Количество товара.
+     * @type {number}
+     * @memberof FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFee
+     */
+    quantity?: number;
+    /**
      * Идентификатор товара в системе Ozon — SKU.
      * @type {number}
      * @memberof FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFee

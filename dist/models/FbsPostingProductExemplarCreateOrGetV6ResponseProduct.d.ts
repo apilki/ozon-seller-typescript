@@ -74,6 +74,13 @@ export interface FbsPostingProductExemplarCreateOrGetV6ResponseProduct {
      */
     quantity?: number;
     /**
+     * `true`, если товар можно опломбировать.
+     *
+     * @type {boolean}
+     * @memberof FbsPostingProductExemplarCreateOrGetV6ResponseProduct
+     */
+    sealing_allowed?: boolean;
+    /**
      * `true`, если товар весовой.
      *
      * @type {boolean}

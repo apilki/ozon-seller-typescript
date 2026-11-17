@@ -1,25 +1,20 @@
-# @apilki/ozon-seller — JavaScript/TypeScript client
+# @apilki/ozon-seller — JavaScript/TypeScript клиент
 
-**Version: 0.3.1 · API as of 2026-04-07** <!-- штампуется пайплайном (GH-дистро); npm-карточка версию не носит -->
+**Версия: 0.4.0 · API от 17.11.2026** <!-- штампуется пайплайном (GH-дистро); npm-карточка версию не носит -->
 
-A **curated generated TypeScript client** for the **OZON Seller API** — generated from the official API specification, with edge-cases and conflicts resolved. Fully typed, fetch-based, zero runtime dependencies, works in Node.js ≥ 18 and browsers. Covers all 482 operations (56 API classes) and is regenerated on every upstream change.
+**@apilki/ozon-seller** — generated TypeScript/JavaScript client for the **OZON Seller API** (fetch-based; works in Node.js ≥ 18 and browsers).
 
 ```bash
 npm install @apilki/ozon-seller
 ```
 
-Docs: <https://docs.ozon.ru/api/seller/> · Full description (RU) below.
+Docs: <https://docs.ozon.ru/api/seller/> · Полное описание (RU) — ниже.
 
 ---
 
 ## Что это
 
-Готовый TypeScript-клиент для **OZON Seller API** — продавец-сторона: товары, заказы, FBO/FBS, цены и остатки, отчёты, аналитика, финансы, отзывы и вопросы. Сгенерирован из официальной документации Ozon и **доведён до ума**: неоднозначности и конфликты документации разбираются агентами и автоматическими рецептами, результат проверяется тестами — вы получаете клиент, который просто работает.
-
-- **Полное покрытие** — все 482 операции, 56 API-классов;
-- **Всегда свежий** — перегенерируется при каждом изменении API Ozon;
-- **Никаких зависимостей** — на чистом `fetch`, работает в Node.js ≥ 18 и в браузере;
-- **Типизация / Ноль сюрпризов** — полная типизация TypeScript (`.d.ts` включены), имена полей сохранены из официальной документации.
+JavaScript/TypeScript клиент для **OZON Seller API** (продавец-сторона): товары, заказы, FBO/FBS, цены и остатки, отчёты, аналитика, финансы, отзывы и вопросы. Сгенерирован из официального сваггера, построен на базе `fetch` API — работает и в Node.js (≥ 18), и в браузере. Публикуется в npm-скоупе `@apilki` (GitHub-орг `apilki`).
 
 ## Установка
 
@@ -62,12 +57,16 @@ await productApi.productAPIGetProductInfoList(ALICE_CLIENT_ID, ALICE_API_KEY, bo
 await productApi.productAPIGetProductInfoList(BOB_CLIENT_ID, BOB_API_KEY, body);
 ```
 
-## Особенности сборки
+### Отладка (middleware)
 
-- **Типизация** — полная поддержка TypeScript (`.d.ts` включены);
-- **Стиль имён методов** — генераторский, не `camelCase`: имя операции из документации API целиком (`productAPIGetProductInfoList`, `supplierAPISupplierAvailableWarehouses`). Сверяйтесь с автодополнением IDE;
-- **Аргументы** — `Client-Id` и `Api-Key` первыми двумя аргументами каждого метода (в отличие от клиентов, где ключ живёт в конфигурации);
-- **Node.js < 18** — требуется полифил `node-fetch` (встроенный `fetch` доступен с Node 18).
+```javascript
+const config = new Configuration({
+    basePath: 'https://api-seller.ozon.ru',
+    middleware: [{
+        pre: async (context) => { console.log(`[OZON] ${context.init?.method} ${context.url}`); return context; },
+    }],
+});
+```
 
 ## Ошибки
 
@@ -86,36 +85,17 @@ try {
 }
 ```
 
-## Отладка (middleware)
-
-```javascript
-const config = new Configuration({
-    basePath: 'https://api-seller.ozon.ru',
-    middleware: [{
-        pre: async (context) => { console.log(`[OZON] ${context.init?.method} ${context.url}`); return context; },
-    }],
-});
-```
-
 ## Покрытие API
 
-Полная спецификация OZON Seller API: **482 операции, 56 API-классов** (товары, заказы, FBO/FBS, цены и остатки, отчёты, аналитика, финансы, отзывы, вопросы и ответы, категории и др.).
+Полный сваггер OZON Seller API: **463 операции, 58 API-классов** (товары, заказы, FBO/FBS, цены и остатки, отчёты, аналитика, финансы, отзывы, вопросы и ответы, категории и др.).
 
 ## Postman-коллекция
 
-Готовая Postman Collection v2.1 (167 запросов) — отдельным артефактом: `apilki/ozon-seller-postman`.
-
-## Тесты
-
-`npm test` после установки — юнит-набор по ключевым путям (встроенный `node:test`, офлайн, без зависимостей и ключей); прогоняется перед каждой публикацией. Покрывает: авторизацию и POST/JSON, GET, path-параметры, бинарные ответы (Blob), ошибки 4xx/5xx и сетевые сбои, middleware, десериализацию и устойчивость к некорректному JSON.
+Готовая Postman Collection v2.1 (463 запроса) — отдельным артефактом: `apilki/ozon-seller-postman`.
 
 ## Языки
 
 TypeScript/JavaScript сейчас; Python и Go — в планах (скоуп `@apilki`).
-
-## Известные ограничения
-
-- `cargoesAPICargoesLabelFile` (GET `/v1/cargoes-label/file/{file_guid}`) — метод устарел (Ozon отключает его 10.04.2026), параметр пути в документации API не раскрыт — URL передаётся как в документации. Используйте замену: `cargoesAPICargoesLabelGet` (POST `/v1/cargoes-label/get`, параметр `operation_id`).
 
 ## Лицензия
 

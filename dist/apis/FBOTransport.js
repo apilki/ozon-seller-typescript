@@ -30,130 +30,6 @@ const index_1 = require("../models/index");
  */
 class FBOTransport extends runtime.BaseAPI {
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.
-     * Получить информацию о статусе удаления грузомест и транспортных грузомест
-     */
-    cargoesDeleteStatusV2Raw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['clientId'] == null) {
-                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling cargoesDeleteStatusV2().');
-            }
-            if (requestParameters['apiKey'] == null) {
-                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling cargoesDeleteStatusV2().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (requestParameters['clientId'] != null) {
-                headerParameters['Client-Id'] = String(requestParameters['clientId']);
-            }
-            if (requestParameters['apiKey'] != null) {
-                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
-            }
-            const response = yield this.request({
-                path: `/v2/cargoes/delete/status`,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: (0, index_1.CargoesV2CargoesDeleteStatusRequestToJSON)(requestParameters['cargoesV2CargoesDeleteStatusRequest']),
-            }, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CargoesV2CargoesDeleteStatusResponseFromJSON)(jsonValue));
-        });
-    }
-    /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.
-     * Получить информацию о статусе удаления грузомест и транспортных грузомест
-     */
-    cargoesDeleteStatusV2(clientId, apiKey, cargoesV2CargoesDeleteStatusRequest, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.cargoesDeleteStatusV2Raw({ clientId: clientId, apiKey: apiKey, cargoesV2CargoesDeleteStatusRequest: cargoesV2CargoesDeleteStatusRequest }, initOverrides);
-            return yield response.value();
-        });
-    }
-    /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.
-     * Удалить грузоместа и транспортные грузоместа в заявке на поставку
-     */
-    cargoesDeleteV2Raw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['clientId'] == null) {
-                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling cargoesDeleteV2().');
-            }
-            if (requestParameters['apiKey'] == null) {
-                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling cargoesDeleteV2().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (requestParameters['clientId'] != null) {
-                headerParameters['Client-Id'] = String(requestParameters['clientId']);
-            }
-            if (requestParameters['apiKey'] != null) {
-                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
-            }
-            const response = yield this.request({
-                path: `/v2/cargoes/delete`,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: (0, index_1.CargoesV2CargoesDeleteRequestToJSON)(requestParameters['cargoesV2CargoesDeleteRequest']),
-            }, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CargoesV2CargoesDeleteResponseFromJSON)(jsonValue));
-        });
-    }
-    /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.
-     * Удалить грузоместа и транспортные грузоместа в заявке на поставку
-     */
-    cargoesDeleteV2(clientId, apiKey, cargoesV2CargoesDeleteRequest, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.cargoesDeleteV2Raw({ clientId: clientId, apiKey: apiKey, cargoesV2CargoesDeleteRequest: cargoesV2CargoesDeleteRequest }, initOverrides);
-            return yield response.value();
-        });
-    }
-    /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.
-     * Получить информацию о грузоместах
-     */
-    cargoesGetV2Raw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['clientId'] == null) {
-                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling cargoesGetV2().');
-            }
-            if (requestParameters['apiKey'] == null) {
-                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling cargoesGetV2().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            if (requestParameters['clientId'] != null) {
-                headerParameters['Client-Id'] = String(requestParameters['clientId']);
-            }
-            if (requestParameters['apiKey'] != null) {
-                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
-            }
-            const response = yield this.request({
-                path: `/v2/cargoes/get`,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: (0, index_1.CargoesV2CargoesGetRequestToJSON)(requestParameters['cargoesV2CargoesGetRequest']),
-            }, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CargoesV2CargoesGetResponseFromJSON)(jsonValue));
-        });
-    }
-    /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.
-     * Получить информацию о грузоместах
-     */
-    cargoesGetV2(clientId, apiKey, cargoesV2CargoesGetRequest, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.cargoesGetV2Raw({ clientId: clientId, apiKey: apiKey, cargoesV2CargoesGetRequest: cargoesV2CargoesGetRequest }, initOverrides);
-            return yield response.value();
-        });
-    }
-    /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Сгенерировать этикетки для транспортных грузомест по идентификатору поставки
      */
     cargoesLabelTransportByOrderCreateRaw(requestParameters, initOverrides) {
@@ -187,7 +63,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Сгенерировать этикетки для транспортных грузомест по идентификатору поставки
      */
     cargoesLabelTransportByOrderCreate(clientId, apiKey, cargoesV1CargoesLabelTransportByOrderCreateRequest, initOverrides) {
@@ -197,7 +72,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус генерации этикеток для транспортных грузомеcт по идентификатору поставки
      */
     cargoesLabelTransportByOrderStatusRaw(requestParameters, initOverrides) {
@@ -231,7 +105,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус генерации этикеток для транспортных грузомеcт по идентификатору поставки
      */
     cargoesLabelTransportByOrderStatus(clientId, apiKey, cargoesV1CargoesLabelTransportByOrderStatusRequest, initOverrides) {
@@ -241,7 +114,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Сгенерировать этикетки транспортных грузомест по идентификатору грузоместа
      */
     cargoesLabelTransportCreateRaw(requestParameters, initOverrides) {
@@ -275,7 +147,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Сгенерировать этикетки транспортных грузомест по идентификатору грузоместа
      */
     cargoesLabelTransportCreate(clientId, apiKey, cargoesV1CargoesLabelTransportCreateRequest, initOverrides) {
@@ -285,7 +156,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус генерации этикеток транспортных грузомест по идентификатору грузоместа
      */
     cargoesLabelTransportStatusRaw(requestParameters, initOverrides) {
@@ -319,7 +189,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус генерации этикеток транспортных грузомест по идентификатору грузоместа
      */
     cargoesLabelTransportStatus(clientId, apiKey, cargoesV1CargoesLabelTransportStatusRequest, initOverrides) {
@@ -329,7 +198,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить информацию о грузоместах в поставках
      */
     cargoesSuppliesGetRaw(requestParameters, initOverrides) {
@@ -363,7 +231,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить информацию о грузоместах в поставках
      */
     cargoesSuppliesGet(clientId, apiKey, cargoesV1CargoesSuppliesGetRequest, initOverrides) {
@@ -373,7 +240,7 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Если в поставке создано грузоместо, отключить транспортные грузоместа не получится.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
+     * Если в поставке создано грузоместо, отключить транспортные грузоместа не получится.
      * Включить или отключить транспортные грузоместа в поставке
      */
     cargoesTransportActivateRaw(requestParameters, initOverrides) {
@@ -407,7 +274,7 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Если в поставке создано грузоместо, отключить транспортные грузоместа не получится.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
+     * Если в поставке создано грузоместо, отключить транспортные грузоместа не получится.
      * Включить или отключить транспортные грузоместа в поставке
      */
     cargoesTransportActivate(clientId, apiKey, cargoesV1CargoesTransportActivateRequest, initOverrides) {
@@ -417,7 +284,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус включения или отключения транспортных грузомест
      */
     cargoesTransportActivateStatusRaw(requestParameters, initOverrides) {
@@ -451,7 +317,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус включения или отключения транспортных грузомест
      */
     cargoesTransportActivateStatus(clientId, apiKey, cargoesV1CargoesTransportActivateStatusRequest, initOverrides) {
@@ -461,7 +326,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Связать или отвязать грузоместа и транспортные грузоместа
      */
     cargoesTransportBindRaw(requestParameters, initOverrides) {
@@ -495,7 +359,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Связать или отвязать грузоместа и транспортные грузоместа
      */
     cargoesTransportBind(clientId, apiKey, cargoesV1CargoesTransportBindRequest, initOverrides) {
@@ -505,7 +368,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус связывания или отвязывания грузомест и транспортных грузомест
      */
     cargoesTransportBindStatusRaw(requestParameters, initOverrides) {
@@ -539,7 +401,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус связывания или отвязывания грузомест и транспортных грузомест
      */
     cargoesTransportBindStatus(clientId, apiKey, cargoesV1CargoesTransportBindStatusRequest, initOverrides) {
@@ -549,7 +410,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Создать транспортное грузоместо
      */
     cargoesTransportCreateRaw(requestParameters, initOverrides) {
@@ -583,7 +443,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Создать транспортное грузоместо
      */
     cargoesTransportCreate(clientId, apiKey, cargoesV1CargoesTransportCreateRequest, initOverrides) {
@@ -593,7 +452,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус создания транспортного грузоместа
      */
     cargoesTransportCreateStatusRaw(requestParameters, initOverrides) {
@@ -627,7 +485,6 @@ class FBOTransport extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2179-Novye-beta-metody-dlia-raboty-s-transportnymi-gruzr/) в сообществе разработчиков Ozon for dev.  [Подробнее о работе с транспортными грузоместами](https://dev.ozon.ru/start/525-Rabota-s-transportnymi-gruzomestami-TGM-v-postavkakh-FBO/)
      * Получить статус создания транспортного грузоместа
      */
     cargoesTransportCreateStatus(clientId, apiKey, cargoesV1CargoesTransportCreateStatusRequest, initOverrides) {

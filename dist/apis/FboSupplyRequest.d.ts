@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { V1CargoesCreateRequest, V1CargoesCreateResponse, V1CargoesDeleteRequest, V1CargoesDeleteResponse, V1CargoesDeleteStatusRequest, V1CargoesDeleteStatusResponse, V1CargoesGetRequest, V1CargoesGetResponse, V1CargoesLabelCreateRequest, V1CargoesLabelCreateResponse, V1CargoesLabelGetRequest, V1CargoesLabelGetResponse, V1CargoesRulesGetRequest, V1CargoesRulesGetResponse, V1DraftClusterListRequest, V1DraftClusterListResponse, V1DraftCreateCommonResponse, V1DraftCrossdockCreateRequest, V1DraftDirectCreateRequest, V1DraftGetWarehouseFboListRequest, V1DraftGetWarehouseFboListResponse, V1DraftMultiClusterCreateRequest, V1SupplyOrderCancelRequest, V1SupplyOrderCancelResponse, V1SupplyOrderCancelStatusRequest, V1SupplyOrderCancelStatusResponse, V1SupplyOrderContentUpdateRequest, V1SupplyOrderContentUpdateResponse, V1SupplyOrderContentUpdateStatusRequest, V1SupplyOrderContentUpdateStatusResponse, V1SupplyOrderContentUpdateValidationRequest, V1SupplyOrderContentUpdateValidationResponse, V1WarehouseFboSellerListResponse, V2CargoesCreateInfoV2Request, V2CargoesCreateInfoV2Response, V2DraftClusterListResponse, V2DraftCreateInfoRequest, V2DraftCreateInfoResponse, V2DraftSupplyCreateRequest, V2DraftSupplyCreateResponse, V2DraftSupplyCreateStatusRequest, V2DraftSupplyCreateStatusResponse, V2DraftTimeslotInfoRequest, V2DraftTimeslotInfoResponse } from '../models/index';
+import type { CargoesV2CargoesDeleteRequest, CargoesV2CargoesDeleteResponse, CargoesV2CargoesDeleteStatusRequest, CargoesV2CargoesDeleteStatusResponse, CargoesV2CargoesGetRequest, CargoesV2CargoesGetResponse, V1CargoesCreateRequest, V1CargoesCreateResponse, V1CargoesDeleteRequest, V1CargoesDeleteResponse, V1CargoesDeleteStatusRequest, V1CargoesDeleteStatusResponse, V1CargoesGetRequest, V1CargoesGetResponse, V1CargoesLabelCreateRequest, V1CargoesLabelCreateResponse, V1CargoesLabelGetRequest, V1CargoesLabelGetResponse, V1CargoesRulesGetRequest, V1CargoesRulesGetResponse, V1DraftClusterListRequest, V1DraftClusterListResponse, V1DraftCreateCommonResponse, V1DraftCrossdockCreateRequest, V1DraftDirectCreateRequest, V1DraftGetWarehouseFboListRequest, V1DraftGetWarehouseFboListResponse, V1DraftMultiClusterCreateRequest, V1SupplyOrderCancelRequest, V1SupplyOrderCancelResponse, V1SupplyOrderCancelStatusRequest, V1SupplyOrderCancelStatusResponse, V1SupplyOrderContentUpdateRequest, V1SupplyOrderContentUpdateResponse, V1SupplyOrderContentUpdateStatusRequest, V1SupplyOrderContentUpdateStatusResponse, V1SupplyOrderContentUpdateValidationRequest, V1SupplyOrderContentUpdateValidationResponse, V1WarehouseFboSellerListResponse, V2CargoesCreateInfoV2Request, V2CargoesCreateInfoV2Response, V2DraftClusterListResponse, V2DraftCreateInfoRequest, V2DraftCreateInfoResponse, V2DraftSupplyCreateRequest, V2DraftSupplyCreateResponse, V2DraftSupplyCreateStatusRequest, V2DraftSupplyCreateStatusResponse, V2DraftTimeslotInfoRequest, V2DraftTimeslotInfoResponse } from '../models/index';
 export interface CargoesAPICargoesCreateRequest {
     clientId: string;
     apiKey: string;
@@ -40,10 +40,25 @@ export interface CargoesCreateInfoV2Request {
     apiKey: string;
     v2CargoesCreateInfoV2Request?: V2CargoesCreateInfoV2Request;
 }
+export interface CargoesDeleteStatusV2Request {
+    clientId: string;
+    apiKey: string;
+    cargoesV2CargoesDeleteStatusRequest?: CargoesV2CargoesDeleteStatusRequest;
+}
+export interface CargoesDeleteV2Request {
+    clientId: string;
+    apiKey: string;
+    cargoesV2CargoesDeleteRequest?: CargoesV2CargoesDeleteRequest | null;
+}
 export interface CargoesGetRequest {
     clientId: string;
     apiKey: string;
     v1CargoesGetRequest?: V1CargoesGetRequest;
+}
+export interface CargoesGetV2Request {
+    clientId: string;
+    apiKey: string;
+    cargoesV2CargoesGetRequest?: CargoesV2CargoesGetRequest;
 }
 export interface DraftClusterListRequest {
     clientId: string;
@@ -188,6 +203,22 @@ export declare class FboSupplyRequest extends runtime.BaseAPI {
      */
     cargoesCreateInfoV2(clientId: string, apiKey: string, v2CargoesCreateInfoV2Request?: V2CargoesCreateInfoV2Request, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V2CargoesCreateInfoV2Response>;
     /**
+     * Получить информацию о статусе удаления грузомест и транспортных грузомест
+     */
+    cargoesDeleteStatusV2Raw(requestParameters: CargoesDeleteStatusV2Request, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CargoesV2CargoesDeleteStatusResponse>>;
+    /**
+     * Получить информацию о статусе удаления грузомест и транспортных грузомест
+     */
+    cargoesDeleteStatusV2(clientId: string, apiKey: string, cargoesV2CargoesDeleteStatusRequest?: CargoesV2CargoesDeleteStatusRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CargoesV2CargoesDeleteStatusResponse>;
+    /**
+     * Удалить грузоместа и транспортные грузоместа в заявке на поставку
+     */
+    cargoesDeleteV2Raw(requestParameters: CargoesDeleteV2Request, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CargoesV2CargoesDeleteResponse>>;
+    /**
+     * Удалить грузоместа и транспортные грузоместа в заявке на поставку
+     */
+    cargoesDeleteV2(clientId: string, apiKey: string, cargoesV2CargoesDeleteRequest?: CargoesV2CargoesDeleteRequest | null, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CargoesV2CargoesDeleteResponse>;
+    /**
      * Получить информацию о грузоместах
      */
     cargoesGetRaw(requestParameters: CargoesGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<V1CargoesGetResponse>>;
@@ -195,6 +226,14 @@ export declare class FboSupplyRequest extends runtime.BaseAPI {
      * Получить информацию о грузоместах
      */
     cargoesGet(clientId: string, apiKey: string, v1CargoesGetRequest?: V1CargoesGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1CargoesGetResponse>;
+    /**
+     * Получить информацию о грузоместах
+     */
+    cargoesGetV2Raw(requestParameters: CargoesGetV2Request, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CargoesV2CargoesGetResponse>>;
+    /**
+     * Получить информацию о грузоместах
+     */
+    cargoesGetV2(clientId: string, apiKey: string, cargoesV2CargoesGetRequest?: CargoesV2CargoesGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CargoesV2CargoesGetResponse>;
     /**
      * Получить информацию о макролокальных кластерах
      */

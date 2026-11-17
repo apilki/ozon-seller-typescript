@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { V1OrderCancelCheckRequest, V1OrderCancelCheckResponse, V1OrderCancelRequest, V1OrderCancelResponse, V1OrderCancelStatusRequest, V1OrderCancelStatusResponse, V1OrderCreateRequest, V1OrderCreateResponse } from '../models/index';
+import type { OrderV1OrderCodeGetRequest, OrderV1OrderCodeGetResponse, V1OrderCancelCheckRequest, V1OrderCancelCheckResponse, V1OrderCancelRequest, V1OrderCancelResponse, V1OrderCancelStatusRequest, V1OrderCancelStatusResponse, V1OrderCreateRequest, V1OrderCreateResponse } from '../models/index';
 export interface OrderAPIOrderCancelRequest {
     v1OrderCancelRequest: V1OrderCancelRequest;
 }
@@ -19,6 +19,9 @@ export interface OrderAPIOrderCancelCheckRequest {
 }
 export interface OrderAPIOrderCancelStatusRequest {
     v1OrderCancelStatusRequest: V1OrderCancelStatusRequest;
+}
+export interface OrderAPIOrderCodeGetRequest {
+    orderV1OrderCodeGetRequest: OrderV1OrderCodeGetRequest;
 }
 export interface OrderAPIOrderCreateRequest {
     v1OrderCreateRequest: V1OrderCreateRequest;
@@ -55,6 +58,16 @@ export declare class OrderAPI extends runtime.BaseAPI {
      * Получить статус отмены заказа
      */
     orderAPIOrderCancelStatus(v1OrderCancelStatusRequest: V1OrderCancelStatusRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1OrderCancelStatusResponse>;
+    /**
+     * Метод возвращает код выдачи заказа для покупателя. Используйте полученный код, чтобы сформировать QR-код.
+     * Получить код выдачи заказа
+     */
+    orderAPIOrderCodeGetRaw(requestParameters: OrderAPIOrderCodeGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<OrderV1OrderCodeGetResponse>>;
+    /**
+     * Метод возвращает код выдачи заказа для покупателя. Используйте полученный код, чтобы сформировать QR-код.
+     * Получить код выдачи заказа
+     */
+    orderAPIOrderCodeGet(orderV1OrderCodeGetRequest: OrderV1OrderCodeGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<OrderV1OrderCodeGetResponse>;
     /**
      * Создаёт заказ для покупателя и получателя в системе Ozon. Передайте вариант доставки из ответа метода [/v2/delivery/checkout](#operation/DeliveryCheckout).  В ответе могут быть не все отправления. Получите список всех отправлений по номеру заказа `order_number` методом: - [/v2/posting/fbo/list](#operation/PostingAPI_GetFboPostingList) — для схемы FBO; - [/v3/posting/fbs/list](#operation/PostingAPI_GetFbsPostingListV3) — для схемы FBS.  Значение параметра `delivery_schema` должно совпадать с тем, что вы передали в [/v2/delivery/checkout](#operation/DeliveryCheckout).
      * Создать заказ

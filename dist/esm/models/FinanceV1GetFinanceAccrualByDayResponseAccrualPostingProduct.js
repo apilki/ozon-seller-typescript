@@ -29,6 +29,7 @@ export function FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductFrom
     return {
         'commission': json['commission'] == null ? undefined : FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductCommissionFromJSON(json['commission']),
         'delivery': json['delivery'] == null ? undefined : FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductDeliveryFromJSON(json['delivery']),
+        'quantity': json['quantity'] == null ? undefined : json['quantity'],
         'sku': json['sku'] == null ? undefined : json['sku'],
     };
 }
@@ -39,6 +40,7 @@ export function FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductToJS
     return {
         'commission': FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductCommissionToJSON(value['commission']),
         'delivery': FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductDeliveryToJSON(value['delivery']),
+        'quantity': value['quantity'],
         'sku': value['sku'],
     };
 }

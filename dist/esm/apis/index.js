@@ -50,6 +50,7 @@ export * from './ReportAPI';
 export * from './ReturnAPI';
 export * from './ReturnsAPI';
 export * from './ReviewAPI';
+export * from './ReviewAPIBeta';
 export * from './SellerActions';
 export * from './SellerInfo';
 export * from './SellerRating';

@@ -50,72 +50,58 @@ export interface UpdateNotificationRequest {
  */
 export declare class Notification extends runtime.BaseAPI {
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Проверить URL-адрес для уведомлений
      */
     checkNotificationRaw(requestParameters: CheckNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<NotificationV1CheckNotificationResponse>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Проверить URL-адрес для уведомлений
      */
     checkNotification(clientId: string, apiKey: string, notificationV1CheckNotificationRequest: NotificationV1CheckNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<NotificationV1CheckNotificationResponse>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Удалить URL-адрес для уведомлений
      */
     deleteNotificationRaw(requestParameters: DeleteNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Удалить URL-адрес для уведомлений
      */
     deleteNotification(clientId: string, apiKey: string, notificationV1DeleteNotificationRequest: NotificationV1DeleteNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Включить или выключить уведомления на URL-адрес
      */
     enableNotificationRaw(requestParameters: EnableNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Включить или выключить уведомления на URL-адрес
      */
     enableNotification(clientId: string, apiKey: string, notificationV1EnableNotificationRequest: NotificationV1EnableNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Получить типы пуш-уведомлений
      */
     getNotificationPushTypeListRaw(requestParameters: GetNotificationPushTypeListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<NotificationV1GetNotificationPushTypeListResponse>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Получить типы пуш-уведомлений
      */
     getNotificationPushTypeList(clientId: string, apiKey: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<NotificationV1GetNotificationPushTypeListResponse>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Получить информацию по подключённым URL-адресам
      */
     notificationListRaw(requestParameters: NotificationListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<NotificationV1NotificationListResponse>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Получить информацию по подключённым URL-адресам
      */
     notificationList(clientId: string, apiKey: string, notificationV1NotificationListRequest: NotificationV1NotificationListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<NotificationV1NotificationListResponse>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Подключить URL-адрес для уведомлений
      */
     setNotificationRaw(requestParameters: SetNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Подключить URL-адрес для уведомлений
      */
     setNotification(clientId: string, apiKey: string, notificationV1SetNotificationRequest: NotificationV1SetNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Изменить URL-адрес для уведомлений
      */
     updateNotificationRaw(requestParameters: UpdateNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Изменить URL-адрес для уведомлений
      */
     updateNotification(clientId: string, apiKey: string, notificationV1UpdateNotificationRequest: NotificationV1UpdateNotificationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<void>;

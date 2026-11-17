@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import type { Productv5GetProductListRequestFilterFilterVisibility } from './Productv5GetProductListRequestFilterFilterVisibility';
+import type { ProductV5FilterPriceIndexCountryEnum } from './ProductV5FilterPriceIndexCountryEnum';
 /**
  * Фильтр по товарам.
  * @export
@@ -22,6 +23,12 @@ export interface Productv5Filter {
      * @memberof Productv5Filter
      */
     offer_id?: Array<string>;
+    /**
+     *
+     * @type {ProductV5FilterPriceIndexCountryEnum}
+     * @memberof Productv5Filter
+     */
+    price_index_country?: ProductV5FilterPriceIndexCountryEnum;
     /**
      * Фильтр по параметру `product_id`. Можно передавать до 1000 значений.
      * @type {Array<string>}

@@ -9,12 +9,19 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import type { PostingV2FbsPostingProductExemplar } from './PostingV2FbsPostingProductExemplar';
 /**
  *
  * @export
  * @interface V2FbsPostingProduct
  */
 export interface V2FbsPostingProduct {
+    /**
+     * Список экземпляров товара.
+     * @type {Array<PostingV2FbsPostingProductExemplar>}
+     * @memberof V2FbsPostingProduct
+     */
+    exemplars?: Array<PostingV2FbsPostingProductExemplar>;
     /**
      * Название товара.
      * @type {string}

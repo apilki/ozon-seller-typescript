@@ -115,8 +115,9 @@ export class FinanceAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * <aside class=\"warning\"> Метод недоступен для продавцов, которые заключили договор с ТОО «ОЗОН Маркетплейс Казахстан». </aside>  Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Отмены и невыкупы не включаются. Отчёт доступен с настоящего времени по август 2023 года включительно.
+     * <aside class=\"warning\"> 17 января 2027 года отключим метод. Переключитесь на <a href=\"#operation/ReportFinanceRealizationList\">/v1/report/finance/realization/list</a>, <a href=\"#operation/CreateFinanceRealizationNumberPostingReport\">/v1/report/finance/realization/number/posting/create</a> и <a href=\"#operation/ReportAPI_ReportInfo\">/v1/report/info</a>.  Метод недоступен для продавцов, которые заключили договор с ТОО «ОЗОН Маркетплейс Казахстан». </aside>  Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Отмены и невыкупы не включаются. Отчёт доступен с настоящего времени по август 2023 года включительно.
      * Позаказный отчёт о реализации товаров
+     * @deprecated
      */
     financeAPIGetRealizationReportV1Raw(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -149,8 +150,9 @@ export class FinanceAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * <aside class=\"warning\"> Метод недоступен для продавцов, которые заключили договор с ТОО «ОЗОН Маркетплейс Казахстан». </aside>  Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Отмены и невыкупы не включаются. Отчёт доступен с настоящего времени по август 2023 года включительно.
+     * <aside class=\"warning\"> 17 января 2027 года отключим метод. Переключитесь на <a href=\"#operation/ReportFinanceRealizationList\">/v1/report/finance/realization/list</a>, <a href=\"#operation/CreateFinanceRealizationNumberPostingReport\">/v1/report/finance/realization/number/posting/create</a> и <a href=\"#operation/ReportAPI_ReportInfo\">/v1/report/info</a>.  Метод недоступен для продавцов, которые заключили договор с ТОО «ОЗОН Маркетплейс Казахстан». </aside>  Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Отмены и невыкупы не включаются. Отчёт доступен с настоящего времени по август 2023 года включительно.
      * Позаказный отчёт о реализации товаров
+     * @deprecated
      */
     financeAPIGetRealizationReportV1(clientId, apiKey, v1GetRealizationReportPostingRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -159,8 +161,9 @@ export class FinanceAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * <aside class=\"warning\"> Метод недоступен для продавцов, которые заключили договор с ТОО «ОЗОН Маркетплейс Казахстан».  Метод позволяет получить отчёт за период не раньше августа 2023 года. Отчёты за более ранние периоды доступны в личном кабинете. </aside>  Отчёт о реализации доставленных и возвращённых товаров за месяц. Отмены и невыкупы не включаются. Соответствует разделу **Финансы → Документы → Отчёты о реализации → Отчёт о реализации товара** в личном кабинете.  Отчёт придёт не позднее 5-го числа следующего месяца.  [Подробнее об отчёте в Базе знаний продавца](https://seller-edu.ozon.ru/docs/finances-documents/calculations-documents/otchet-o-realizacii-tovarov.html)
+     * <aside class=\"warning\"> 17 января 2027 года отключим метод. Переключитесь на <a href=\"#operation/ReportFinanceRealizationList\">/v1/report/finance/realization/list</a>, <a href=\"#operation/CreateFinanceRealizationNumberReport\">/v1/report/finance/realization/number/create</a> и <a href=\"#operation/ReportAPI_ReportInfo\">/v1/report/info</a>.  Метод недоступен для продавцов, которые заключили договор с ТОО «ОЗОН Маркетплейс Казахстан».  Метод позволяет получить отчёт за период не раньше августа 2023 года. Отчёты за более ранние периоды доступны в личном кабинете. </aside>  Отчёт о реализации доставленных и возвращённых товаров за месяц. Отмены и невыкупы не включаются. Соответствует разделу **Финансы → Документы → Отчёты о реализации → Отчёт о реализации товара** в личном кабинете.  Отчёт придёт не позднее 5-го числа следующего месяца.  [Подробнее об отчёте в Базе знаний продавца](https://seller-edu.ozon.ru/docs/finances-documents/calculations-documents/otchet-o-realizacii-tovarov.html)
      * Отчёт о реализации товаров (версия 2)
+     * @deprecated
      */
     financeAPIGetRealizationReportV2Raw(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -193,8 +196,9 @@ export class FinanceAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * <aside class=\"warning\"> Метод недоступен для продавцов, которые заключили договор с ТОО «ОЗОН Маркетплейс Казахстан».  Метод позволяет получить отчёт за период не раньше августа 2023 года. Отчёты за более ранние периоды доступны в личном кабинете. </aside>  Отчёт о реализации доставленных и возвращённых товаров за месяц. Отмены и невыкупы не включаются. Соответствует разделу **Финансы → Документы → Отчёты о реализации → Отчёт о реализации товара** в личном кабинете.  Отчёт придёт не позднее 5-го числа следующего месяца.  [Подробнее об отчёте в Базе знаний продавца](https://seller-edu.ozon.ru/docs/finances-documents/calculations-documents/otchet-o-realizacii-tovarov.html)
+     * <aside class=\"warning\"> 17 января 2027 года отключим метод. Переключитесь на <a href=\"#operation/ReportFinanceRealizationList\">/v1/report/finance/realization/list</a>, <a href=\"#operation/CreateFinanceRealizationNumberReport\">/v1/report/finance/realization/number/create</a> и <a href=\"#operation/ReportAPI_ReportInfo\">/v1/report/info</a>.  Метод недоступен для продавцов, которые заключили договор с ТОО «ОЗОН Маркетплейс Казахстан».  Метод позволяет получить отчёт за период не раньше августа 2023 года. Отчёты за более ранние периоды доступны в личном кабинете. </aside>  Отчёт о реализации доставленных и возвращённых товаров за месяц. Отмены и невыкупы не включаются. Соответствует разделу **Финансы → Документы → Отчёты о реализации → Отчёт о реализации товара** в личном кабинете.  Отчёт придёт не позднее 5-го числа следующего месяца.  [Подробнее об отчёте в Базе знаний продавца](https://seller-edu.ozon.ru/docs/finances-documents/calculations-documents/otchet-o-realizacii-tovarov.html)
      * Отчёт о реализации товаров (версия 2)
+     * @deprecated
      */
     financeAPIGetRealizationReportV2(clientId, apiKey, v2GetRealizationReportRequestV2, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {

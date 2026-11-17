@@ -15,6 +15,8 @@
  * Check if a given object implements the OrderCreateRequestBuyer interface.
  */
 export function instanceOfOrderCreateRequestBuyer(value) {
+    if (!('email' in value) || value['email'] === undefined)
+        return false;
     if (!('first_name' in value) || value['first_name'] === undefined)
         return false;
     if (!('last_name' in value) || value['last_name'] === undefined)
@@ -31,6 +33,7 @@ export function OrderCreateRequestBuyerFromJSONTyped(json, ignoreDiscriminator) 
         return json;
     }
     return {
+        'email': json['email'],
         'first_name': json['first_name'],
         'last_name': json['last_name'],
         'middle_name': json['middle_name'] == null ? undefined : json['middle_name'],
@@ -42,6 +45,7 @@ export function OrderCreateRequestBuyerToJSON(value) {
         return value;
     }
     return {
+        'email': value['email'],
         'first_name': value['first_name'],
         'last_name': value['last_name'],
         'middle_name': value['middle_name'],

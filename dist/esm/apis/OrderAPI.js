@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { V1OrderCancelCheckRequestToJSON, V1OrderCancelCheckResponseFromJSON, V1OrderCancelRequestToJSON, V1OrderCancelResponseFromJSON, V1OrderCancelStatusRequestToJSON, V1OrderCancelStatusResponseFromJSON, V1OrderCreateRequestToJSON, V1OrderCreateResponseFromJSON, } from '../models/index';
+import { OrderV1OrderCodeGetRequestToJSON, OrderV1OrderCodeGetResponseFromJSON, V1OrderCancelCheckRequestToJSON, V1OrderCancelCheckResponseFromJSON, V1OrderCancelRequestToJSON, V1OrderCancelResponseFromJSON, V1OrderCancelStatusRequestToJSON, V1OrderCancelStatusResponseFromJSON, V1OrderCreateRequestToJSON, V1OrderCreateResponseFromJSON, } from '../models/index';
 /**
  *
  */
@@ -117,6 +117,38 @@ export class OrderAPI extends runtime.BaseAPI {
     orderAPIOrderCancelStatus(v1OrderCancelStatusRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.orderAPIOrderCancelStatusRaw({ v1OrderCancelStatusRequest: v1OrderCancelStatusRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
+     * Метод возвращает код выдачи заказа для покупателя. Используйте полученный код, чтобы сформировать QR-код.
+     * Получить код выдачи заказа
+     */
+    orderAPIOrderCodeGetRaw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['orderV1OrderCodeGetRequest'] == null) {
+                throw new runtime.RequiredError('orderV1OrderCodeGetRequest', 'Required parameter "orderV1OrderCodeGetRequest" was null or undefined when calling orderAPIOrderCodeGet().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/v1/order/code/get`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: OrderV1OrderCodeGetRequestToJSON(requestParameters['orderV1OrderCodeGetRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => OrderV1OrderCodeGetResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Метод возвращает код выдачи заказа для покупателя. Используйте полученный код, чтобы сформировать QR-код.
+     * Получить код выдачи заказа
+     */
+    orderAPIOrderCodeGet(orderV1OrderCodeGetRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.orderAPIOrderCodeGetRaw({ orderV1OrderCodeGetRequest: orderV1OrderCodeGetRequest }, initOverrides);
             return yield response.value();
         });
     }

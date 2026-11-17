@@ -11,6 +11,7 @@
  */
 import type { PriceIndexesIndexExternalData } from './PriceIndexesIndexExternalData';
 import type { PriceIndexesIndexSelfData } from './PriceIndexesIndexSelfData';
+import type { ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndex } from './ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndex';
 import type { PriceIndexesIndexOzonData } from './PriceIndexesIndexOzonData';
 /**
  * Индексы цены товара.
@@ -33,6 +34,12 @@ export interface GetProductInfoPricesResponseItemPriceIndexes {
      * @memberof GetProductInfoPricesResponseItemPriceIndexes
      */
     color_index?: GetProductInfoPricesResponseItemPriceIndexesColorIndexEnum;
+    /**
+     *
+     * @type {ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndex}
+     * @memberof GetProductInfoPricesResponseItemPriceIndexes
+     */
+    competitor_index_data?: ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndex;
     /**
      *
      * @type {PriceIndexesIndexExternalData}

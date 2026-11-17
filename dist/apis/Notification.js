@@ -30,7 +30,6 @@ const index_1 = require("../models/index");
  */
 class Notification extends runtime.BaseAPI {
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Проверить URL-адрес для уведомлений
      */
     checkNotificationRaw(requestParameters, initOverrides) {
@@ -64,7 +63,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Проверить URL-адрес для уведомлений
      */
     checkNotification(clientId, apiKey, notificationV1CheckNotificationRequest, initOverrides) {
@@ -74,7 +72,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Удалить URL-адрес для уведомлений
      */
     deleteNotificationRaw(requestParameters, initOverrides) {
@@ -108,7 +105,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Удалить URL-адрес для уведомлений
      */
     deleteNotification(clientId, apiKey, notificationV1DeleteNotificationRequest, initOverrides) {
@@ -117,7 +113,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Включить или выключить уведомления на URL-адрес
      */
     enableNotificationRaw(requestParameters, initOverrides) {
@@ -151,7 +146,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Включить или выключить уведомления на URL-адрес
      */
     enableNotification(clientId, apiKey, notificationV1EnableNotificationRequest, initOverrides) {
@@ -160,7 +154,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Получить типы пуш-уведомлений
      */
     getNotificationPushTypeListRaw(requestParameters, initOverrides) {
@@ -189,7 +182,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Получить типы пуш-уведомлений
      */
     getNotificationPushTypeList(clientId, apiKey, initOverrides) {
@@ -199,7 +191,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Получить информацию по подключённым URL-адресам
      */
     notificationListRaw(requestParameters, initOverrides) {
@@ -233,7 +224,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Получить информацию по подключённым URL-адресам
      */
     notificationList(clientId, apiKey, notificationV1NotificationListRequest, initOverrides) {
@@ -243,7 +233,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Подключить URL-адрес для уведомлений
      */
     setNotificationRaw(requestParameters, initOverrides) {
@@ -277,7 +266,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Подключить URL-адрес для уведомлений
      */
     setNotification(clientId, apiKey, notificationV1SetNotificationRequest, initOverrides) {
@@ -286,7 +274,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Изменить URL-адрес для уведомлений
      */
     updateNotificationRaw(requestParameters, initOverrides) {
@@ -320,7 +307,6 @@ class Notification extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1978-Novye-beta-metody-dlia-upravleniia-podkliucheniiami-PUSH-uvedomlenii/) в сообществе разработчиков Ozon for dev.
      * Изменить URL-адрес для уведомлений
      */
     updateNotification(clientId, apiKey, notificationV1UpdateNotificationRequest, initOverrides) {

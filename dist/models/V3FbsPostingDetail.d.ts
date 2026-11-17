@@ -82,7 +82,9 @@ export interface V3FbsPostingDetail {
      * - `ship_async` — собрать отправление;
      * - `ship_with_additional_info` — необходимо заполнить дополнительную информацию;
      * - `ship` — собрать отправление;
-     * - `update_cis` — изменить дополнительную информацию.
+     * - `update_cis` — изменить дополнительную информацию;
+     * - `edit_seal_number` — изменить номера пломб товаров в отправлении;
+     * - `set_seal_number` — указать номера пломб товаров в отправлении.
      *
      * @type {Array<string>}
      * @memberof V3FbsPostingDetail

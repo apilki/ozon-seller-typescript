@@ -10,10 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { ProductBooleanResponse, ProductGetImportProductsInfoRequest, ProductGetImportProductsInfoResponse, ProductGetProductInfoDescriptionRequest, ProductGetProductInfoDescriptionResponse, ProductImportProductsBySKURequest, ProductImportProductsBySKUResponse, ProductProductArchiveRequest, ProductProductUnarchiveRequest, ProductV1GetProductInfoStocksByWarehouseFboRequest, ProductV1GetProductInfoStocksByWarehouseFboResponse, ProductV2ProductImportPicturesV2Request, ProductV2ProductInfoPicturesV2Response, Productv1ProductImportPicturesRequest, Productv1ProductInfoPicturesResponse, Productv2DeleteProductsRequest, Productv2DeleteProductsResponse, Productv3GetProductListRequest, Productv3GetProductListResponse, Productv4GetProductAttributesV4Request, Productv4GetProductAttributesV4Response, V1GetProductInfoSubscriptionRequest, V1GetProductInfoSubscriptionResponse, V1GetProductRatingBySkuRequest, V1GetProductRatingBySkuResponse, V1ProductGetRelatedSKURequest, V1ProductGetRelatedSKUResponse, V1ProductInfoWrongVolumeRequest, V1ProductInfoWrongVolumeResponse, V1ProductUpdateAttributesRequest, V1ProductUpdateAttributesResponse, V1ProductUpdateOfferIdRequest, V1ProductUpdateOfferIdResponse, V2ProductInfoPicturesRequest, V2ProductInfoPicturesResponse, V3GetProductInfoListRequest, V3GetProductInfoListResponse, V3ImportProductsRequest, V3ImportProductsResponse, V4GetUploadQuotaResponse } from '../models/index';
-export interface GetProductInfoStocksByWarehouseFboRequest {
-    productV1GetProductInfoStocksByWarehouseFboRequest: ProductV1GetProductInfoStocksByWarehouseFboRequest;
-}
+import type { ProductBooleanResponse, ProductGetImportProductsInfoRequest, ProductGetImportProductsInfoResponse, ProductGetProductInfoDescriptionRequest, ProductGetProductInfoDescriptionResponse, ProductImportProductsBySKURequest, ProductImportProductsBySKUResponse, ProductProductArchiveRequest, ProductProductUnarchiveRequest, ProductV2ProductImportPicturesV2Request, ProductV2ProductInfoPicturesV2Response, Productv1ProductImportPicturesRequest, Productv1ProductInfoPicturesResponse, Productv2DeleteProductsRequest, Productv2DeleteProductsResponse, Productv3GetProductListRequest, Productv3GetProductListResponse, Productv4GetProductAttributesV4Request, Productv4GetProductAttributesV4Response, V1GetProductInfoSubscriptionRequest, V1GetProductInfoSubscriptionResponse, V1GetProductRatingBySkuRequest, V1GetProductRatingBySkuResponse, V1ProductGetRelatedSKURequest, V1ProductGetRelatedSKUResponse, V1ProductInfoWrongVolumeRequest, V1ProductInfoWrongVolumeResponse, V1ProductUpdateAttributesRequest, V1ProductUpdateAttributesResponse, V1ProductUpdateOfferIdRequest, V1ProductUpdateOfferIdResponse, V2ProductInfoPicturesRequest, V2ProductInfoPicturesResponse, V3GetProductInfoListRequest, V3GetProductInfoListResponse, V3ImportProductsRequest, V3ImportProductsResponse, V4GetUploadQuotaResponse } from '../models/index';
 export interface ProductAPIDeleteProductsRequest {
     clientId: string;
     apiKey: string;
@@ -115,16 +112,6 @@ export interface ProductImportPicturesV2Request {
  *
  */
 export declare class ProductAPI extends runtime.BaseAPI {
-    /**
-     * Передайте в запросе `offer_ids` или `skus`.  Вы можете оставить обратную связь по этому методу в комментариях к [обсуждению](https://dev.ozon.ru/community/2177-Novyi-metod-dlia-polucheniia-ostatkov-FBO/) в сообществе разработчиков Ozon for dev.
-     * Получить информацию о стоках на складах FBO
-     */
-    getProductInfoStocksByWarehouseFboRaw(requestParameters: GetProductInfoStocksByWarehouseFboRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ProductV1GetProductInfoStocksByWarehouseFboResponse>>;
-    /**
-     * Передайте в запросе `offer_ids` или `skus`.  Вы можете оставить обратную связь по этому методу в комментариях к [обсуждению](https://dev.ozon.ru/community/2177-Novyi-metod-dlia-polucheniia-ostatkov-FBO/) в сообществе разработчиков Ozon for dev.
-     * Получить информацию о стоках на складах FBO
-     */
-    getProductInfoStocksByWarehouseFbo(productV1GetProductInfoStocksByWarehouseFboRequest: ProductV1GetProductInfoStocksByWarehouseFboRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ProductV1GetProductInfoStocksByWarehouseFboResponse>;
     /**
      * В одном запросе можно передать до 500 идентификаторов.
      * Удалить товар без SKU из архива

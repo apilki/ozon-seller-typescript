@@ -29,9 +29,10 @@ export interface V5FbsPostingProductExemplarValidateV5ResponseProductExemplarMar
     mark?: string;
     /**
      * Тип кода маркировки:
-     *  - `mandatory_mark` — обязательная маркировка «Честный ЗНАК»;
-     *  - `jw_uin` — уникальный идентификационный номер (УИН) ювелирного изделия;
-     *  - `imei` — IMEI мобильного устройства.
+     * - `mandatory_mark` — обязательная маркировка «Честный ЗНАК»;
+     * - `jw_uin` — уникальный идентификационный номер (УИН) ювелирного изделия;
+     * - `imei` — IMEI мобильного устройства;
+     * - `seal_number` — номер пломбы.
      *
      * @type {string}
      * @memberof V5FbsPostingProductExemplarValidateV5ResponseProductExemplarMark

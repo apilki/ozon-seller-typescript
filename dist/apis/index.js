@@ -66,6 +66,7 @@ __exportStar(require("./ReportAPI"), exports);
 __exportStar(require("./ReturnAPI"), exports);
 __exportStar(require("./ReturnsAPI"), exports);
 __exportStar(require("./ReviewAPI"), exports);
+__exportStar(require("./ReviewAPIBeta"), exports);
 __exportStar(require("./SellerActions"), exports);
 __exportStar(require("./SellerInfo"), exports);
 __exportStar(require("./SellerRating"), exports);

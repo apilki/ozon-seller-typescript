@@ -18,6 +18,7 @@ exports.Productv5FilterFromJSON = Productv5FilterFromJSON;
 exports.Productv5FilterFromJSONTyped = Productv5FilterFromJSONTyped;
 exports.Productv5FilterToJSON = Productv5FilterToJSON;
 const Productv5GetProductListRequestFilterFilterVisibility_1 = require("./Productv5GetProductListRequestFilterFilterVisibility");
+const ProductV5FilterPriceIndexCountryEnum_1 = require("./ProductV5FilterPriceIndexCountryEnum");
 /**
  * Check if a given object implements the Productv5Filter interface.
  */
@@ -33,6 +34,7 @@ function Productv5FilterFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'offer_id': json['offer_id'] == null ? undefined : json['offer_id'],
+        'price_index_country': json['price_index_country'] == null ? undefined : (0, ProductV5FilterPriceIndexCountryEnum_1.ProductV5FilterPriceIndexCountryEnumFromJSON)(json['price_index_country']),
         'product_id': json['product_id'] == null ? undefined : json['product_id'],
         'visibility': json['visibility'] == null ? undefined : (0, Productv5GetProductListRequestFilterFilterVisibility_1.Productv5GetProductListRequestFilterFilterVisibilityFromJSON)(json['visibility']),
     };
@@ -43,6 +45,7 @@ function Productv5FilterToJSON(value) {
     }
     return {
         'offer_id': value['offer_id'],
+        'price_index_country': (0, ProductV5FilterPriceIndexCountryEnum_1.ProductV5FilterPriceIndexCountryEnumToJSON)(value['price_index_country']),
         'product_id': value['product_id'],
         'visibility': (0, Productv5GetProductListRequestFilterFilterVisibility_1.Productv5GetProductListRequestFilterFilterVisibilityToJSON)(value['visibility']),
     };

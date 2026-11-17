@@ -10,7 +10,12 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { CommonCreateReportResponse, ReportCreateCompanyPostingsReportRequest, ReportCreateCompanyProductsReportRequest, ReportCreateDiscountedResponse, ReportCreateReportResponse, ReportReportInfoRequest, ReportReportInfoResponse, ReportReportListRequest, ReportReportListResponse, V1CreatePlacementByProductsReportRequest, V1CreatePlacementByProductsReportResponse, V1CreatePlacementBySuppliesReportRequest, V1CreatePlacementBySuppliesReportResponse, V1CreateStockByWarehouseReportRequest, V1ReportMarkedProductsSalesCreateRequest, V2ReportReturnsCreateRequest, V2ReportReturnsCreateResponse, V3FinanceCashFlowStatementListRequest, V3FinanceCashFlowStatementListResponse } from '../models/index';
+import type { CommonCreateReportResponse, ReportCreateCompanyPostingsReportRequest, ReportCreateCompanyProductsReportRequest, ReportCreateDiscountedResponse, ReportCreateReportResponse, ReportReportInfoRequest, ReportReportInfoResponse, ReportReportListRequest, ReportReportListResponse, ReportV1CreateCompanyFinanceRealizationPostingReportRequest, ReportV1CreateCompanyFinanceRealizationPostingReportResponse, V1CreatePlacementByProductsReportRequest, V1CreatePlacementByProductsReportResponse, V1CreatePlacementBySuppliesReportRequest, V1CreatePlacementBySuppliesReportResponse, V1CreateStockByWarehouseReportRequest, V1ReportMarkedProductsSalesCreateRequest, V2ReportReturnsCreateRequest, V2ReportReturnsCreateResponse, V3FinanceCashFlowStatementListRequest, V3FinanceCashFlowStatementListResponse } from '../models/index';
+export interface CreateCompanyFinanceRealizationPostingReportRequest {
+    clientId: string;
+    apiKey: string;
+    reportV1CreateCompanyFinanceRealizationPostingReportRequest: ReportV1CreateCompanyFinanceRealizationPostingReportRequest;
+}
 export interface CreateCompanyMarkedProductsSalesReportRequest {
     clientId: string;
     apiKey: string;
@@ -70,6 +75,18 @@ export interface ReportAPIReportReturnsCreateRequest {
  *
  */
 export declare class ReportAPI extends runtime.BaseAPI {
+    /**
+     * <aside class=\"warning\"> 17 января 2027 года отключим метод. Переключитесь на <a href=\"#operation/ReportFinanceRealizationList\">/v1/report/finance/realization/list</a> и <a href=\"#operation/CreateFinanceRealizationNumberPostingReport\">/v1/report/finance/realization/number/posting/create</a>. </aside>  Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Не включает отмены и невыкупы. Отчёт доступен с настоящего времени по август 2023 года включительно.
+     * Получить позаказный отчёт о реализации товаров
+     * @deprecated
+     */
+    createCompanyFinanceRealizationPostingReportRaw(requestParameters: CreateCompanyFinanceRealizationPostingReportRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ReportV1CreateCompanyFinanceRealizationPostingReportResponse>>;
+    /**
+     * <aside class=\"warning\"> 17 января 2027 года отключим метод. Переключитесь на <a href=\"#operation/ReportFinanceRealizationList\">/v1/report/finance/realization/list</a> и <a href=\"#operation/CreateFinanceRealizationNumberPostingReport\">/v1/report/finance/realization/number/posting/create</a>. </aside>  Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Не включает отмены и невыкупы. Отчёт доступен с настоящего времени по август 2023 года включительно.
+     * Получить позаказный отчёт о реализации товаров
+     * @deprecated
+     */
+    createCompanyFinanceRealizationPostingReport(clientId: string, apiKey: string, reportV1CreateCompanyFinanceRealizationPostingReportRequest: ReportV1CreateCompanyFinanceRealizationPostingReportRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ReportV1CreateCompanyFinanceRealizationPostingReportResponse>;
     /**
      * В одном отчёте вы можете получить не больше 50 000 кодов маркировки. Чтобы получить остальные данные, уменьшите период формирования отчёта.
      * Сгенерировать отчёт по продажам товаров с маркировкой

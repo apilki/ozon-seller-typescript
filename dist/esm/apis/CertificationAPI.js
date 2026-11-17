@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { CertificationV2ProductCertificateCreateRequestToJSON, CertificationV2ProductCertificateCreateResponseFromJSON, CertificationV2ProductCertificateOptionsResponseFromJSON, CertificationV2ProductCertificateParamsRequestToJSON, CertificationV2ProductCertificateParamsResponseFromJSON, ProductBooleanResponseFromJSON, ProductProductCertificateAccordanceTypesResponseFromJSON, ProductProductCertificateBindRequestToJSON, ProductProductCertificateTypesResponseFromJSON, ProductProductCertificationListRequestToJSON, ProductProductCertificationListResponseFromJSON, V1ProductCertificateDeleteRequestToJSON, V1ProductCertificateDeleteResponseFromJSON, V1ProductCertificateInfoRequestToJSON, V1ProductCertificateInfoResponseFromJSON, V1ProductCertificateListRequestToJSON, V1ProductCertificateListResponseFromJSON, V1ProductCertificateProductStatusListResponseFromJSON, V1ProductCertificateProductsListRequestToJSON, V1ProductCertificateProductsListResponseFromJSON, V1ProductCertificateRejectionReasonsListResponseFromJSON, V1ProductCertificateStatusListResponseFromJSON, V1ProductCertificateUnbindRequestToJSON, V1ProductCertificateUnbindResponseFromJSON, V2ProductCertificateAccordanceTypesResponseFromJSON, V2ProductCertificationListRequestToJSON, V2ProductCertificationListResponseFromJSON, } from '../models/index';
+import { CertificationV2ProductCertificateCreateRequestToJSON, CertificationV2ProductCertificateCreateResponseFromJSON, CertificationV2ProductCertificateOptionsResponseFromJSON, CertificationV2ProductCertificateParamsRequestToJSON, CertificationV2ProductCertificateParamsResponseFromJSON, CertificationV2ProductCertificateProductsListV2RequestToJSON, CertificationV2ProductCertificateProductsListV2ResponseFromJSON, ProductBooleanResponseFromJSON, ProductProductCertificateAccordanceTypesResponseFromJSON, ProductProductCertificateBindRequestToJSON, ProductProductCertificateTypesResponseFromJSON, ProductProductCertificationListRequestToJSON, ProductProductCertificationListResponseFromJSON, V1ProductCertificateDeleteRequestToJSON, V1ProductCertificateDeleteResponseFromJSON, V1ProductCertificateInfoRequestToJSON, V1ProductCertificateInfoResponseFromJSON, V1ProductCertificateListRequestToJSON, V1ProductCertificateListResponseFromJSON, V1ProductCertificateProductStatusListResponseFromJSON, V1ProductCertificateProductsListRequestToJSON, V1ProductCertificateProductsListResponseFromJSON, V1ProductCertificateRejectionReasonsListResponseFromJSON, V1ProductCertificateStatusListResponseFromJSON, V1ProductCertificateUnbindRequestToJSON, V1ProductCertificateUnbindResponseFromJSON, V2ProductCertificateAccordanceTypesResponseFromJSON, V2ProductCertificationListRequestToJSON, V2ProductCertificationListResponseFromJSON, } from '../models/index';
 /**
  *
  */
@@ -178,8 +178,9 @@ export class CertificationAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * <aside class=\"warning\"> 28 сентября 2026 года отключим параметры <code>page</code> и <code>page_size</code> в запросе метода. Используйте параметры <code>last_id</code> и <code>limit</code>. </aside>
+     * <aside class=\"warning\"> 12 декабря 2026 года отключим метод. Переключитесь на <a href=\"#operation/ProductCertificateProductsListV2\">/v2/product/certificate/products/list</a>. </aside>
      * Список товаров, привязанных к сертификату
+     * @deprecated
      */
     certificateProductsListRaw(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -212,8 +213,9 @@ export class CertificationAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * <aside class=\"warning\"> 28 сентября 2026 года отключим параметры <code>page</code> и <code>page_size</code> в запросе метода. Используйте параметры <code>last_id</code> и <code>limit</code>. </aside>
+     * <aside class=\"warning\"> 12 декабря 2026 года отключим метод. Переключитесь на <a href=\"#operation/ProductCertificateProductsListV2\">/v2/product/certificate/products/list</a>. </aside>
      * Список товаров, привязанных к сертификату
+     * @deprecated
      */
     certificateProductsList(clientId, apiKey, v1ProductCertificateProductsListRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -720,6 +722,48 @@ export class CertificationAPI extends runtime.BaseAPI {
     productCertificateParams(clientId, apiKey, certificationV2ProductCertificateParamsRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.productCertificateParamsRaw({ clientId: clientId, apiKey: apiKey, certificationV2ProductCertificateParamsRequest: certificationV2ProductCertificateParamsRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
+     * Получить список товаров, которые привязаны к сертификату
+     */
+    productCertificateProductsListV2Raw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['clientId'] == null) {
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling productCertificateProductsListV2().');
+            }
+            if (requestParameters['apiKey'] == null) {
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling productCertificateProductsListV2().');
+            }
+            if (requestParameters['certificationV2ProductCertificateProductsListV2Request'] == null) {
+                throw new runtime.RequiredError('certificationV2ProductCertificateProductsListV2Request', 'Required parameter "certificationV2ProductCertificateProductsListV2Request" was null or undefined when calling productCertificateProductsListV2().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (requestParameters['clientId'] != null) {
+                headerParameters['Client-Id'] = String(requestParameters['clientId']);
+            }
+            if (requestParameters['apiKey'] != null) {
+                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
+            }
+            const response = yield this.request({
+                path: `/v2/product/certificate/products/list`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: CertificationV2ProductCertificateProductsListV2RequestToJSON(requestParameters['certificationV2ProductCertificateProductsListV2Request']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => CertificationV2ProductCertificateProductsListV2ResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Получить список товаров, которые привязаны к сертификату
+     */
+    productCertificateProductsListV2(clientId, apiKey, certificationV2ProductCertificateProductsListV2Request, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.productCertificateProductsListV2Raw({ clientId: clientId, apiKey: apiKey, certificationV2ProductCertificateProductsListV2Request: certificationV2ProductCertificateProductsListV2Request }, initOverrides);
             return yield response.value();
         });
     }

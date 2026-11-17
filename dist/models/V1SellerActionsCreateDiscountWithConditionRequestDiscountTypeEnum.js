@@ -19,15 +19,12 @@ exports.V1SellerActionsCreateDiscountWithConditionRequestDiscountTypeEnumFromJSO
 exports.V1SellerActionsCreateDiscountWithConditionRequestDiscountTypeEnumFromJSONTyped = V1SellerActionsCreateDiscountWithConditionRequestDiscountTypeEnumFromJSONTyped;
 exports.V1SellerActionsCreateDiscountWithConditionRequestDiscountTypeEnumToJSON = V1SellerActionsCreateDiscountWithConditionRequestDiscountTypeEnumToJSON;
 /**
- * Тип скидки:
- * - `PERCENT` — скидка в процентах;
- * - `CURRENCY` — скидка в валюте.
+ * Тип скидки: `PERCENT` — скидка в процентах.
  *
  * @export
  */
 exports.V1SellerActionsCreateDiscountWithConditionRequestDiscountTypeEnum = {
-    PERCENT: 'PERCENT',
-    CURRENCY: 'CURRENCY'
+    PERCENT: 'PERCENT'
 };
 function instanceOfV1SellerActionsCreateDiscountWithConditionRequestDiscountTypeEnum(value) {
     for (const key in exports.V1SellerActionsCreateDiscountWithConditionRequestDiscountTypeEnum) {

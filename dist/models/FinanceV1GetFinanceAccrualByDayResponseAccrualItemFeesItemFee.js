@@ -33,6 +33,7 @@ function FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeFromJSONTy
     }
     return {
         'fees': json['fees'] == null ? undefined : (json['fees'].map(FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeFee_1.FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeFeeFromJSON)),
+        'quantity': json['quantity'] == null ? undefined : json['quantity'],
         'sku': json['sku'] == null ? undefined : json['sku'],
     };
 }
@@ -42,6 +43,7 @@ function FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeToJSON(val
     }
     return {
         'fees': value['fees'] == null ? undefined : (value['fees'].map(FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeFee_1.FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeFeeToJSON)),
+        'quantity': value['quantity'],
         'sku': value['sku'],
     };
 }

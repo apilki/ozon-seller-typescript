@@ -10,15 +10,12 @@
  * Do not edit the class manually.
  */
 /**
- * Тип скидки:
- *  - `PERCENT` — скидка в процентах;
- *  - `CURRENCY` — скидка в валюте.
+ * Тип скидки: `PERCENT` — скидка в процентах.
  *
  * @export
  */
 export declare const V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnum: {
     readonly PERCENT: "PERCENT";
-    readonly CURRENCY: "CURRENCY";
 };
 export type V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnum = typeof V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnum[keyof typeof V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnum];
 export declare function instanceOfV1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnum(value: any): boolean;

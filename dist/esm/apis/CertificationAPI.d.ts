@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { CertificationV2ProductCertificateCreateRequest, CertificationV2ProductCertificateCreateResponse, CertificationV2ProductCertificateOptionsResponse, CertificationV2ProductCertificateParamsRequest, CertificationV2ProductCertificateParamsResponse, ProductBooleanResponse, ProductProductCertificateAccordanceTypesResponse, ProductProductCertificateBindRequest, ProductProductCertificateTypesResponse, ProductProductCertificationListRequest, ProductProductCertificationListResponse, V1ProductCertificateDeleteRequest, V1ProductCertificateDeleteResponse, V1ProductCertificateInfoRequest, V1ProductCertificateInfoResponse, V1ProductCertificateListRequest, V1ProductCertificateListResponse, V1ProductCertificateProductStatusListResponse, V1ProductCertificateProductsListRequest, V1ProductCertificateProductsListResponse, V1ProductCertificateRejectionReasonsListResponse, V1ProductCertificateStatusListResponse, V1ProductCertificateUnbindRequest, V1ProductCertificateUnbindResponse, V2ProductCertificateAccordanceTypesResponse, V2ProductCertificationListRequest, V2ProductCertificationListResponse } from '../models/index';
+import type { CertificationV2ProductCertificateCreateRequest, CertificationV2ProductCertificateCreateResponse, CertificationV2ProductCertificateOptionsResponse, CertificationV2ProductCertificateParamsRequest, CertificationV2ProductCertificateParamsResponse, CertificationV2ProductCertificateProductsListV2Request, CertificationV2ProductCertificateProductsListV2Response, ProductBooleanResponse, ProductProductCertificateAccordanceTypesResponse, ProductProductCertificateBindRequest, ProductProductCertificateTypesResponse, ProductProductCertificationListRequest, ProductProductCertificationListResponse, V1ProductCertificateDeleteRequest, V1ProductCertificateDeleteResponse, V1ProductCertificateInfoRequest, V1ProductCertificateInfoResponse, V1ProductCertificateListRequest, V1ProductCertificateListResponse, V1ProductCertificateProductStatusListResponse, V1ProductCertificateProductsListRequest, V1ProductCertificateProductsListResponse, V1ProductCertificateRejectionReasonsListResponse, V1ProductCertificateStatusListResponse, V1ProductCertificateUnbindRequest, V1ProductCertificateUnbindResponse, V2ProductCertificateAccordanceTypesResponse, V2ProductCertificationListRequest, V2ProductCertificationListResponse } from '../models/index';
 export interface CertificateAccordanceTypesRequest {
     clientId: string;
     apiKey: string;
@@ -90,6 +90,11 @@ export interface ProductCertificateParamsRequest {
     apiKey: string;
     certificationV2ProductCertificateParamsRequest: CertificationV2ProductCertificateParamsRequest;
 }
+export interface ProductCertificateProductsListV2Request {
+    clientId: string;
+    apiKey: string;
+    certificationV2ProductCertificateProductsListV2Request: CertificationV2ProductCertificateProductsListV2Request;
+}
 export interface ProductStatusListRequest {
     clientId: string;
     apiKey: string;
@@ -135,13 +140,15 @@ export declare class CertificationAPI extends runtime.BaseAPI {
      */
     certificateList(clientId: string, apiKey: string, v1ProductCertificateListRequest: V1ProductCertificateListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1ProductCertificateListResponse>;
     /**
-     * <aside class=\"warning\"> 28 сентября 2026 года отключим параметры <code>page</code> и <code>page_size</code> в запросе метода. Используйте параметры <code>last_id</code> и <code>limit</code>. </aside>
+     * <aside class=\"warning\"> 12 декабря 2026 года отключим метод. Переключитесь на <a href=\"#operation/ProductCertificateProductsListV2\">/v2/product/certificate/products/list</a>. </aside>
      * Список товаров, привязанных к сертификату
+     * @deprecated
      */
     certificateProductsListRaw(requestParameters: CertificateProductsListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<V1ProductCertificateProductsListResponse>>;
     /**
-     * <aside class=\"warning\"> 28 сентября 2026 года отключим параметры <code>page</code> и <code>page_size</code> в запросе метода. Используйте параметры <code>last_id</code> и <code>limit</code>. </aside>
+     * <aside class=\"warning\"> 12 декабря 2026 года отключим метод. Переключитесь на <a href=\"#operation/ProductCertificateProductsListV2\">/v2/product/certificate/products/list</a>. </aside>
      * Список товаров, привязанных к сертификату
+     * @deprecated
      */
     certificateProductsList(clientId: string, apiKey: string, v1ProductCertificateProductsListRequest: V1ProductCertificateProductsListRequest | null, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1ProductCertificateProductsListResponse>;
     /**
@@ -242,6 +249,14 @@ export declare class CertificationAPI extends runtime.BaseAPI {
      * Получить обязательные параметры для создания сертификата качества
      */
     productCertificateParams(clientId: string, apiKey: string, certificationV2ProductCertificateParamsRequest: CertificationV2ProductCertificateParamsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CertificationV2ProductCertificateParamsResponse>;
+    /**
+     * Получить список товаров, которые привязаны к сертификату
+     */
+    productCertificateProductsListV2Raw(requestParameters: ProductCertificateProductsListV2Request, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CertificationV2ProductCertificateProductsListV2Response>>;
+    /**
+     * Получить список товаров, которые привязаны к сертификату
+     */
+    productCertificateProductsListV2(clientId: string, apiKey: string, certificationV2ProductCertificateProductsListV2Request: CertificationV2ProductCertificateProductsListV2Request, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CertificationV2ProductCertificateProductsListV2Response>;
     /**
      * Метод для получения списка возможных статусов товаров при их привязке к сертификату.
      * Список возможных статусов товаров

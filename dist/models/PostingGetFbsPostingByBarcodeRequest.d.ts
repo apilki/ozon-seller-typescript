@@ -16,7 +16,9 @@
  */
 export interface PostingGetFbsPostingByBarcodeRequest {
     /**
-     * Штрихкод отправления. Можно получить с помощью методов [/v3/posting/fbs/get](#operation/PostingAPI_GetFbsPostingV3), [/v4/posting/fbs/list](#operation/PostingFbsList) и [/v4/posting/fbs/unfulfilled/list](#operation/PostingFbsUnfulfilledList) в массиве `barcodes` или параметре `scanit`.
+     * Штрихкод отправления или номер пломбы товара.
+     *
+     * Получите штрихкод отправления с помощью методов [/v3/posting/fbs/get](#operation/PostingAPI_GetFbsPostingV3), [/v4/posting/fbs/list](#operation/PostingFbsList) и [/v4/posting/fbs/unfulfilled/list](#operation/PostingFbsUnfulfilledList) в массиве `barcodes` или параметре `scanit`.
      *
      * @type {string}
      * @memberof PostingGetFbsPostingByBarcodeRequest

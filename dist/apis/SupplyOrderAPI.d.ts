@@ -36,42 +36,34 @@ export interface SupplyOrderActSummaryGetRequest {
  */
 export declare class SupplyOrderAPI extends runtime.BaseAPI {
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Согласовать акт
      */
     supplyOrderActAcceptRaw(requestParameters: SupplyOrderActAcceptRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<SupplyOrderV1SupplyOrderActAcceptResponse>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Согласовать акт
      */
     supplyOrderActAccept(clientId: string, apiKey: string, supplyOrderV1SupplyOrderActAcceptRequest?: SupplyOrderV1SupplyOrderActAcceptRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SupplyOrderV1SupplyOrderActAcceptResponse>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить статус согласования акта
      */
     supplyOrderActAcceptStatusRaw(requestParameters: SupplyOrderActAcceptStatusRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<SupplyOrderV1SupplyOrderActAcceptStatusResponse>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить статус согласования акта
      */
     supplyOrderActAcceptStatus(clientId: string, apiKey: string, supplyOrderV1SupplyOrderActAcceptStatusRequest?: SupplyOrderV1SupplyOrderActAcceptStatusRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SupplyOrderV1SupplyOrderActAcceptStatusResponse>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить информацию о товарах в акте
      */
     supplyOrderActProductGetRaw(requestParameters: SupplyOrderActProductGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<SupplyOrderV1SupplyOrderActProductGetResponse>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить информацию о товарах в акте
      */
     supplyOrderActProductGet(clientId: string, apiKey: string, supplyOrderV1SupplyOrderActProductGetRequest?: SupplyOrderV1SupplyOrderActProductGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SupplyOrderV1SupplyOrderActProductGetResponse>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить информацию об акте
      */
     supplyOrderActSummaryGetRaw(requestParameters: SupplyOrderActSummaryGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<SupplyOrderV1SupplyOrderActSummaryGetResponse>>;
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить информацию об акте
      */
     supplyOrderActSummaryGet(clientId: string, apiKey: string, supplyOrderV1SupplyOrderActSummaryGetRequest?: SupplyOrderV1SupplyOrderActSummaryGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<SupplyOrderV1SupplyOrderActSummaryGetResponse>;

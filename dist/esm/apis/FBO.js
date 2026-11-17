@@ -490,6 +490,7 @@ export class FBO extends runtime.BaseAPI {
         });
     }
     /**
+     * Вы можете отправить не больше 300 запросов в час.
      * Обновить интервал поставки
      */
     supplyOrderAPIUpdateSupplyOrderTimeslotRaw(requestParameters, initOverrides) {
@@ -523,6 +524,7 @@ export class FBO extends runtime.BaseAPI {
         });
     }
     /**
+     * Вы можете отправить не больше 300 запросов в час.
      * Обновить интервал поставки
      */
     supplyOrderAPIUpdateSupplyOrderTimeslot(clientId, apiKey, v1UpdateSupplyOrderTimeslotRequest, initOverrides) {
@@ -564,7 +566,7 @@ export class FBO extends runtime.BaseAPI {
         });
     }
     /**
-     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).
+     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).  Вы можете отправить не больше 1800 запросов в час.
      * Информация о заявке на поставку
      */
     supplyOrderGetRaw(requestParameters, initOverrides) {
@@ -583,7 +585,7 @@ export class FBO extends runtime.BaseAPI {
         });
     }
     /**
-     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).
+     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).  Вы можете отправить не больше 1800 запросов в час.
      * Информация о заявке на поставку
      */
     supplyOrderGet(v3SupplyOrderGetRequest, initOverrides) {
@@ -593,7 +595,7 @@ export class FBO extends runtime.BaseAPI {
         });
     }
     /**
-     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).
+     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).  Вы можете отправить не больше 1800 запросов в час.
      * Список заявок на поставку на склад Ozon
      */
     supplyOrderListRaw(requestParameters, initOverrides) {
@@ -612,7 +614,7 @@ export class FBO extends runtime.BaseAPI {
         });
     }
     /**
-     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).
+     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).  Вы можете отправить не больше 1800 запросов в час.
      * Список заявок на поставку на склад Ozon
      */
     supplyOrderList(v3SupplyOrderListRequest, initOverrides) {

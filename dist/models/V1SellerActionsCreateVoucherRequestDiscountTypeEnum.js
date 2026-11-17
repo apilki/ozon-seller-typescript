@@ -19,15 +19,12 @@ exports.V1SellerActionsCreateVoucherRequestDiscountTypeEnumFromJSON = V1SellerAc
 exports.V1SellerActionsCreateVoucherRequestDiscountTypeEnumFromJSONTyped = V1SellerActionsCreateVoucherRequestDiscountTypeEnumFromJSONTyped;
 exports.V1SellerActionsCreateVoucherRequestDiscountTypeEnumToJSON = V1SellerActionsCreateVoucherRequestDiscountTypeEnumToJSON;
 /**
- * Тип скидки:
- *  - `PERCENT` — скидка в процентах;
- *  - `CURRENCY` — скидка в валюте.
+ * Тип скидки: `PERCENT` — скидка в процентах.
  *
  * @export
  */
 exports.V1SellerActionsCreateVoucherRequestDiscountTypeEnum = {
-    PERCENT: 'PERCENT',
-    CURRENCY: 'CURRENCY'
+    PERCENT: 'PERCENT'
 };
 function instanceOfV1SellerActionsCreateVoucherRequestDiscountTypeEnum(value) {
     for (const key in exports.V1SellerActionsCreateVoucherRequestDiscountTypeEnum) {

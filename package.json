@@ -1,6 +1,6 @@
 {
   "name": "@apilki/ozon-seller",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "OpenAPI client for @apilki/ozon-seller",
   "main": "./dist/index.js",
   "module": "./dist/esm/index.js",

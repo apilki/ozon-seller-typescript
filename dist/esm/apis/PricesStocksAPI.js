@@ -21,11 +21,43 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { ProductImportProductsPricesRequestToJSON, ProductImportProductsPricesResponseFromJSON, Productsv1GetProductInfoStocksByWarehouseFbsRequestToJSON, Productsv1GetProductInfoStocksByWarehouseFbsResponseFromJSON, Productv2ProductsStocksRequestToJSON, Productv2ProductsStocksResponseFromJSON, Productv5GetProductInfoPricesV5RequestToJSON, Productv5GetProductInfoPricesV5ResponseFromJSON, V1GetProductInfoDiscountedRequestToJSON, V1GetProductInfoDiscountedResponseFromJSON, V1ProductActionTimerStatusRequestToJSON, V1ProductActionTimerStatusResponseFromJSON, V1ProductActionTimerUpdateRequestToJSON, V1ProductInfoWarehouseStocksRequestToJSON, V1ProductInfoWarehouseStocksResponseFromJSON, V1ProductUpdateDiscountRequestToJSON, V1ProductUpdateDiscountResponseFromJSON, V2GetProductInfoStocksByWarehouseFbsRequestV2ToJSON, V2GetProductInfoStocksByWarehouseFbsResponseV2FromJSON, V4GetProductInfoStocksRequestToJSON, V4GetProductInfoStocksResponseFromJSON, } from '../models/index';
+import { ProductImportProductsPricesRequestToJSON, ProductImportProductsPricesResponseFromJSON, ProductV1GetProductInfoStocksByWarehouseFboRequestToJSON, ProductV1GetProductInfoStocksByWarehouseFboResponseFromJSON, Productsv1GetProductInfoStocksByWarehouseFbsRequestToJSON, Productsv1GetProductInfoStocksByWarehouseFbsResponseFromJSON, Productv2ProductsStocksRequestToJSON, Productv2ProductsStocksResponseFromJSON, Productv5GetProductInfoPricesV5RequestToJSON, Productv5GetProductInfoPricesV5ResponseFromJSON, V1GetProductInfoDiscountedRequestToJSON, V1GetProductInfoDiscountedResponseFromJSON, V1ProductActionTimerStatusRequestToJSON, V1ProductActionTimerStatusResponseFromJSON, V1ProductActionTimerUpdateRequestToJSON, V1ProductInfoWarehouseStocksRequestToJSON, V1ProductInfoWarehouseStocksResponseFromJSON, V1ProductUpdateDiscountRequestToJSON, V1ProductUpdateDiscountResponseFromJSON, V2GetProductInfoStocksByWarehouseFbsRequestV2ToJSON, V2GetProductInfoStocksByWarehouseFbsResponseV2FromJSON, V4GetProductInfoStocksRequestToJSON, V4GetProductInfoStocksResponseFromJSON, } from '../models/index';
 /**
  *
  */
 export class PricesStocksAPI extends runtime.BaseAPI {
+    /**
+     * Передайте в запросе `offer_ids` или `skus`.
+     * Получить информацию об остатках на складах FBO
+     */
+    getProductInfoStocksByWarehouseFboRaw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['productV1GetProductInfoStocksByWarehouseFboRequest'] == null) {
+                throw new runtime.RequiredError('productV1GetProductInfoStocksByWarehouseFboRequest', 'Required parameter "productV1GetProductInfoStocksByWarehouseFboRequest" was null or undefined when calling getProductInfoStocksByWarehouseFbo().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/v1/product/info/stocks-by-warehouse/fbo`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: ProductV1GetProductInfoStocksByWarehouseFboRequestToJSON(requestParameters['productV1GetProductInfoStocksByWarehouseFboRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => ProductV1GetProductInfoStocksByWarehouseFboResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Передайте в запросе `offer_ids` или `skus`.
+     * Получить информацию об остатках на складах FBO
+     */
+    getProductInfoStocksByWarehouseFbo(productV1GetProductInfoStocksByWarehouseFboRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.getProductInfoStocksByWarehouseFboRaw({ productV1GetProductInfoStocksByWarehouseFboRequest: productV1GetProductInfoStocksByWarehouseFboRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
     /**
      * Получить статус установленного таймера
      */
@@ -415,7 +447,7 @@ export class PricesStocksAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Позволяет изменить информацию о количестве товара в наличии.  <aside class=\"warning\"> Переданный остаток — количество товара в наличии без учёта зарезервированных товаров. Перед обновлением остатков проверьте количество зарезервированных товаров с помощью метода <a href=\"#operation/ProductAPI_GetProductInfoStocksByWarehouseFbsV2\">/v2/product/info/stocks-by-warehouse/fbs</a>. </aside>  За один запрос можно изменить наличие для 100 пар товар-склад. С одного аккаунта продавца можно отправить до 80 запросов в минуту.  <aside class=\"warning\">Обновлять остатки у одной пары товар-склад можно только 1 раз в 30 секунд, иначе в параметре <code>result.errors</code> в ответе будет ошибка <code>TOO_MANY_REQUESTS</code>.</aside>  Вы можете задать наличие товара только после того, как его статус сменится на `price_sent`.  Остатки крупногабаритных товаров можно обновлять только на предназначенных для них складах.  Если запрос содержит оба параметра — `offer_id` и `product_id`, изменения применятся к товару с `offer_id`. Для избежания неоднозначности используйте только один из параметров.
+     * Позволяет изменить информацию о количестве товара в наличии.  <aside class=\"warning\"> Переданный остаток — количество товара в наличии без учёта зарезервированных товаров. Перед обновлением остатков проверьте количество зарезервированных товаров с помощью метода <a href=\"#operation/ProductAPI_GetProductInfoStocksByWarehouseFbsV2\">/v2/product/info/stocks-by-warehouse/fbs</a> или <a href=\"#operation/ProductInfoWarehouseStocks\">/v1/product/info/warehouse/stocks</a>. </aside>  За один запрос можно изменить наличие для 100 пар товар-склад. С одного аккаунта продавца можно отправить до 80 запросов в минуту.  <aside class=\"warning\">Обновлять остатки у одной пары товар-склад можно только 1 раз в 30 секунд, иначе в параметре <code>result.errors</code> в ответе будет ошибка <code>TOO_MANY_REQUESTS</code>.</aside>  Вы можете задать наличие товара только после того, как его статус сменится на `price_sent`.  Остатки крупногабаритных товаров можно обновлять только на предназначенных для них складах.  Если запрос содержит оба параметра — `offer_id` и `product_id`, изменения применятся к товару с `offer_id`. Для избежания неоднозначности используйте только один из параметров.
      * Обновить количество товаров на складах
      */
     productAPIProductsStocksV2Raw(requestParameters, initOverrides) {
@@ -449,7 +481,7 @@ export class PricesStocksAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Позволяет изменить информацию о количестве товара в наличии.  <aside class=\"warning\"> Переданный остаток — количество товара в наличии без учёта зарезервированных товаров. Перед обновлением остатков проверьте количество зарезервированных товаров с помощью метода <a href=\"#operation/ProductAPI_GetProductInfoStocksByWarehouseFbsV2\">/v2/product/info/stocks-by-warehouse/fbs</a>. </aside>  За один запрос можно изменить наличие для 100 пар товар-склад. С одного аккаунта продавца можно отправить до 80 запросов в минуту.  <aside class=\"warning\">Обновлять остатки у одной пары товар-склад можно только 1 раз в 30 секунд, иначе в параметре <code>result.errors</code> в ответе будет ошибка <code>TOO_MANY_REQUESTS</code>.</aside>  Вы можете задать наличие товара только после того, как его статус сменится на `price_sent`.  Остатки крупногабаритных товаров можно обновлять только на предназначенных для них складах.  Если запрос содержит оба параметра — `offer_id` и `product_id`, изменения применятся к товару с `offer_id`. Для избежания неоднозначности используйте только один из параметров.
+     * Позволяет изменить информацию о количестве товара в наличии.  <aside class=\"warning\"> Переданный остаток — количество товара в наличии без учёта зарезервированных товаров. Перед обновлением остатков проверьте количество зарезервированных товаров с помощью метода <a href=\"#operation/ProductAPI_GetProductInfoStocksByWarehouseFbsV2\">/v2/product/info/stocks-by-warehouse/fbs</a> или <a href=\"#operation/ProductInfoWarehouseStocks\">/v1/product/info/warehouse/stocks</a>. </aside>  За один запрос можно изменить наличие для 100 пар товар-склад. С одного аккаунта продавца можно отправить до 80 запросов в минуту.  <aside class=\"warning\">Обновлять остатки у одной пары товар-склад можно только 1 раз в 30 секунд, иначе в параметре <code>result.errors</code> в ответе будет ошибка <code>TOO_MANY_REQUESTS</code>.</aside>  Вы можете задать наличие товара только после того, как его статус сменится на `price_sent`.  Остатки крупногабаритных товаров можно обновлять только на предназначенных для них складах.  Если запрос содержит оба параметра — `offer_id` и `product_id`, изменения применятся к товару с `offer_id`. Для избежания неоднозначности используйте только один из параметров.
      * Обновить количество товаров на складах
      */
     productAPIProductsStocksV2(clientId, apiKey, productv2ProductsStocksRequest, initOverrides) {

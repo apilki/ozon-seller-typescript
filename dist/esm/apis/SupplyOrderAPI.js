@@ -27,7 +27,6 @@ import { SupplyOrderV1SupplyOrderActAcceptRequestToJSON, SupplyOrderV1SupplyOrde
  */
 export class SupplyOrderAPI extends runtime.BaseAPI {
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Согласовать акт
      */
     supplyOrderActAcceptRaw(requestParameters, initOverrides) {
@@ -58,7 +57,6 @@ export class SupplyOrderAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Согласовать акт
      */
     supplyOrderActAccept(clientId, apiKey, supplyOrderV1SupplyOrderActAcceptRequest, initOverrides) {
@@ -68,7 +66,6 @@ export class SupplyOrderAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить статус согласования акта
      */
     supplyOrderActAcceptStatusRaw(requestParameters, initOverrides) {
@@ -99,7 +96,6 @@ export class SupplyOrderAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить статус согласования акта
      */
     supplyOrderActAcceptStatus(clientId, apiKey, supplyOrderV1SupplyOrderActAcceptStatusRequest, initOverrides) {
@@ -109,7 +105,6 @@ export class SupplyOrderAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить информацию о товарах в акте
      */
     supplyOrderActProductGetRaw(requestParameters, initOverrides) {
@@ -140,7 +135,6 @@ export class SupplyOrderAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить информацию о товарах в акте
      */
     supplyOrderActProductGet(clientId, apiKey, supplyOrderV1SupplyOrderActProductGetRequest, initOverrides) {
@@ -150,7 +144,6 @@ export class SupplyOrderAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить информацию об акте
      */
     supplyOrderActSummaryGetRaw(requestParameters, initOverrides) {
@@ -181,7 +174,6 @@ export class SupplyOrderAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2294-Novye-beta-metody-dlia-raboty-s-aktami-FBO/) в сообществе разработчиков Ozon for dev.
      * Получить информацию об акте
      */
     supplyOrderActSummaryGet(clientId, apiKey, supplyOrderV1SupplyOrderActSummaryGetRequest, initOverrides) {

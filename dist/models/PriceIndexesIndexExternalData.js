@@ -17,6 +17,7 @@ exports.instanceOfPriceIndexesIndexExternalData = instanceOfPriceIndexesIndexExt
 exports.PriceIndexesIndexExternalDataFromJSON = PriceIndexesIndexExternalDataFromJSON;
 exports.PriceIndexesIndexExternalDataFromJSONTyped = PriceIndexesIndexExternalDataFromJSONTyped;
 exports.PriceIndexesIndexExternalDataToJSON = PriceIndexesIndexExternalDataToJSON;
+const ProductV5ColorIndex_1 = require("./ProductV5ColorIndex");
 /**
  * Check if a given object implements the PriceIndexesIndexExternalData interface.
  */
@@ -33,6 +34,9 @@ function PriceIndexesIndexExternalDataFromJSONTyped(json, ignoreDiscriminator) {
     return {
         'min_price': json['min_price'] == null ? undefined : json['min_price'],
         'min_price_currency': json['min_price_currency'] == null ? undefined : json['min_price_currency'],
+        'min_price_in_seller': json['min_price_in_seller'] == null ? undefined : json['min_price_in_seller'],
+        'min_price_in_seller_currency': json['min_price_in_seller_currency'] == null ? undefined : json['min_price_in_seller_currency'],
+        'price_index_color': json['price_index_color'] == null ? undefined : (0, ProductV5ColorIndex_1.ProductV5ColorIndexFromJSON)(json['price_index_color']),
         'price_index_value': json['price_index_value'] == null ? undefined : json['price_index_value'],
     };
 }
@@ -43,6 +47,9 @@ function PriceIndexesIndexExternalDataToJSON(value) {
     return {
         'min_price': value['min_price'],
         'min_price_currency': value['min_price_currency'],
+        'min_price_in_seller': value['min_price_in_seller'],
+        'min_price_in_seller_currency': value['min_price_in_seller_currency'],
+        'price_index_color': (0, ProductV5ColorIndex_1.ProductV5ColorIndexToJSON)(value['price_index_color']),
         'price_index_value': value['price_index_value'],
     };
 }

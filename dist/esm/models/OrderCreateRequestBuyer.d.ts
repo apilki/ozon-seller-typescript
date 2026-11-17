@@ -16,6 +16,12 @@
  */
 export interface OrderCreateRequestBuyer {
     /**
+     * Электронная почта.
+     * @type {string}
+     * @memberof OrderCreateRequestBuyer
+     */
+    email: string;
+    /**
      * Имя.
      * @type {string}
      * @memberof OrderCreateRequestBuyer

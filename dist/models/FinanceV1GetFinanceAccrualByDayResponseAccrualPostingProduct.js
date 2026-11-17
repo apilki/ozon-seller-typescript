@@ -35,6 +35,7 @@ function FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductFromJSONTyp
     return {
         'commission': json['commission'] == null ? undefined : (0, FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductCommission_1.FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductCommissionFromJSON)(json['commission']),
         'delivery': json['delivery'] == null ? undefined : (0, FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductDelivery_1.FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductDeliveryFromJSON)(json['delivery']),
+        'quantity': json['quantity'] == null ? undefined : json['quantity'],
         'sku': json['sku'] == null ? undefined : json['sku'],
     };
 }
@@ -45,6 +46,7 @@ function FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductToJSON(valu
     return {
         'commission': (0, FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductCommission_1.FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductCommissionToJSON)(value['commission']),
         'delivery': (0, FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductDelivery_1.FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductDeliveryToJSON)(value['delivery']),
+        'quantity': value['quantity'],
         'sku': value['sku'],
     };
 }

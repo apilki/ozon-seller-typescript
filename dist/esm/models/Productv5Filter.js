@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { Productv5GetProductListRequestFilterFilterVisibilityFromJSON, Productv5GetProductListRequestFilterFilterVisibilityToJSON, } from './Productv5GetProductListRequestFilterFilterVisibility';
+import { ProductV5FilterPriceIndexCountryEnumFromJSON, ProductV5FilterPriceIndexCountryEnumToJSON, } from './ProductV5FilterPriceIndexCountryEnum';
 /**
  * Check if a given object implements the Productv5Filter interface.
  */
@@ -27,6 +28,7 @@ export function Productv5FilterFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'offer_id': json['offer_id'] == null ? undefined : json['offer_id'],
+        'price_index_country': json['price_index_country'] == null ? undefined : ProductV5FilterPriceIndexCountryEnumFromJSON(json['price_index_country']),
         'product_id': json['product_id'] == null ? undefined : json['product_id'],
         'visibility': json['visibility'] == null ? undefined : Productv5GetProductListRequestFilterFilterVisibilityFromJSON(json['visibility']),
     };
@@ -37,6 +39,7 @@ export function Productv5FilterToJSON(value) {
     }
     return {
         'offer_id': value['offer_id'],
+        'price_index_country': ProductV5FilterPriceIndexCountryEnumToJSON(value['price_index_country']),
         'product_id': value['product_id'],
         'visibility': Productv5GetProductListRequestFilterFilterVisibilityToJSON(value['visibility']),
     };

@@ -34,6 +34,7 @@ function V5FbsPostingProductExemplarStatusV5ResponseProductFromJSONTyped(json, i
     return {
         'exemplars': json['exemplars'] == null ? undefined : (json['exemplars'].map(V5FbsPostingProductExemplarStatusV5ResponseProductExemplar_1.V5FbsPostingProductExemplarStatusV5ResponseProductExemplarFromJSON)),
         'product_id': json['product_id'] == null ? undefined : json['product_id'],
+        'sealing_allowed': json['sealing_allowed'] == null ? undefined : json['sealing_allowed'],
     };
 }
 function V5FbsPostingProductExemplarStatusV5ResponseProductToJSON(value) {
@@ -43,5 +44,6 @@ function V5FbsPostingProductExemplarStatusV5ResponseProductToJSON(value) {
     return {
         'exemplars': value['exemplars'] == null ? undefined : (value['exemplars'].map(V5FbsPostingProductExemplarStatusV5ResponseProductExemplar_1.V5FbsPostingProductExemplarStatusV5ResponseProductExemplarToJSON)),
         'product_id': value['product_id'],
+        'sealing_allowed': value['sealing_allowed'],
     };
 }

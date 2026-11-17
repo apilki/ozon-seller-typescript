@@ -11,6 +11,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import { PostingV2FbsPostingProductExemplarFromJSON, PostingV2FbsPostingProductExemplarToJSON, } from './PostingV2FbsPostingProductExemplar';
 /**
  * Check if a given object implements the V2FbsPostingProduct interface.
  */
@@ -25,6 +26,7 @@ export function V2FbsPostingProductFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'exemplars': json['exemplars'] == null ? undefined : (json['exemplars'].map(PostingV2FbsPostingProductExemplarFromJSON)),
         'name': json['name'] == null ? undefined : json['name'],
         'offer_id': json['offer_id'] == null ? undefined : json['offer_id'],
         'price': json['price'] == null ? undefined : json['price'],
@@ -37,6 +39,7 @@ export function V2FbsPostingProductToJSON(value) {
         return value;
     }
     return {
+        'exemplars': value['exemplars'] == null ? undefined : (value['exemplars'].map(PostingV2FbsPostingProductExemplarToJSON)),
         'name': value['name'],
         'offer_id': value['offer_id'],
         'price': value['price'],

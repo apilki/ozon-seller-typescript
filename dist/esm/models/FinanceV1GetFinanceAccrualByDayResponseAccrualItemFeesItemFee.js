@@ -27,6 +27,7 @@ export function FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeFro
     }
     return {
         'fees': json['fees'] == null ? undefined : (json['fees'].map(FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeFeeFromJSON)),
+        'quantity': json['quantity'] == null ? undefined : json['quantity'],
         'sku': json['sku'] == null ? undefined : json['sku'],
     };
 }
@@ -36,6 +37,7 @@ export function FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeToJ
     }
     return {
         'fees': value['fees'] == null ? undefined : (value['fees'].map(FinanceV1GetFinanceAccrualByDayResponseAccrualItemFeesItemFeeFeeToJSON)),
+        'quantity': value['quantity'],
         'sku': value['sku'],
     };
 }

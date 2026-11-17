@@ -18,6 +18,7 @@ exports.ActionsV2ActionsProductsResponseProductFromJSON = ActionsV2ActionsProduc
 exports.ActionsV2ActionsProductsResponseProductFromJSONTyped = ActionsV2ActionsProductsResponseProductFromJSONTyped;
 exports.ActionsV2ActionsProductsResponseProductToJSON = ActionsV2ActionsProductsResponseProductToJSON;
 const MoneyMoneyPriceMaxElastic_1 = require("./MoneyMoneyPriceMaxElastic");
+const MoneyMoneyActionPriceBeforeAutoAdd_1 = require("./MoneyMoneyActionPriceBeforeAutoAdd");
 const ActionsV2ActionsProductsResponseProductProductWebsitePrices_1 = require("./ActionsV2ActionsProductsResponseProductProductWebsitePrices");
 const MoneyMoneyFBPget_1 = require("./MoneyMoneyFBPget");
 const MoneyMoneyActionPriceToAutoAdd_1 = require("./MoneyMoneyActionPriceToAutoAdd");
@@ -42,6 +43,7 @@ function ActionsV2ActionsProductsResponseProductFromJSONTyped(json, ignoreDiscri
     }
     return {
         'action_price': json['action_price'] == null ? undefined : (0, MoneyMoneyActionPriceToAutoAdd_1.MoneyMoneyActionPriceToAutoAddFromJSON)(json['action_price']),
+        'action_price_before_auto_add': json['action_price_before_auto_add'] == null ? undefined : (0, MoneyMoneyActionPriceBeforeAutoAdd_1.MoneyMoneyActionPriceBeforeAutoAddFromJSON)(json['action_price_before_auto_add']),
         'add_mode': json['add_mode'] == null ? undefined : (0, ActionsV2ActionsProductsResponseProductAddModeEnum_1.ActionsV2ActionsProductsResponseProductAddModeEnumFromJSON)(json['add_mode']),
         'alert_max_action_price': json['alert_max_action_price'] == null ? undefined : (0, MoneyMoneyAlertMaxActionPrice_1.MoneyMoneyAlertMaxActionPriceFromJSON)(json['alert_max_action_price']),
         'alert_max_action_price_failed': json['alert_max_action_price_failed'] == null ? undefined : json['alert_max_action_price_failed'],
@@ -68,6 +70,7 @@ function ActionsV2ActionsProductsResponseProductToJSON(value) {
     }
     return {
         'action_price': (0, MoneyMoneyActionPriceToAutoAdd_1.MoneyMoneyActionPriceToAutoAddToJSON)(value['action_price']),
+        'action_price_before_auto_add': (0, MoneyMoneyActionPriceBeforeAutoAdd_1.MoneyMoneyActionPriceBeforeAutoAddToJSON)(value['action_price_before_auto_add']),
         'add_mode': (0, ActionsV2ActionsProductsResponseProductAddModeEnum_1.ActionsV2ActionsProductsResponseProductAddModeEnumToJSON)(value['add_mode']),
         'alert_max_action_price': (0, MoneyMoneyAlertMaxActionPrice_1.MoneyMoneyAlertMaxActionPriceToJSON)(value['alert_max_action_price']),
         'alert_max_action_price_failed': value['alert_max_action_price_failed'],

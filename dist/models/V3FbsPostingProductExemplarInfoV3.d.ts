@@ -52,6 +52,12 @@ export interface V3FbsPostingProductExemplarInfoV3 {
      */
     is_rnpt_absent?: boolean;
     /**
+     * Номер пломбы экземпляра.
+     * @type {string}
+     * @memberof V3FbsPostingProductExemplarInfoV3
+     */
+    seal_number?: string;
+    /**
      * Фактический вес экземпляра.
      * @type {number}
      * @memberof V3FbsPostingProductExemplarInfoV3

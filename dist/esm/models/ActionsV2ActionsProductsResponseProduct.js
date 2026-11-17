@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 import { MoneyMoneyPriceMaxElasticFromJSON, MoneyMoneyPriceMaxElasticToJSON, } from './MoneyMoneyPriceMaxElastic';
+import { MoneyMoneyActionPriceBeforeAutoAddFromJSON, MoneyMoneyActionPriceBeforeAutoAddToJSON, } from './MoneyMoneyActionPriceBeforeAutoAdd';
 import { ActionsV2ActionsProductsResponseProductProductWebsitePricesFromJSON, ActionsV2ActionsProductsResponseProductProductWebsitePricesToJSON, } from './ActionsV2ActionsProductsResponseProductProductWebsitePrices';
 import { MoneyMoneyFBPgetFromJSON, MoneyMoneyFBPgetToJSON, } from './MoneyMoneyFBPget';
 import { MoneyMoneyActionPriceToAutoAddFromJSON, MoneyMoneyActionPriceToAutoAddToJSON, } from './MoneyMoneyActionPriceToAutoAdd';
@@ -36,6 +37,7 @@ export function ActionsV2ActionsProductsResponseProductFromJSONTyped(json, ignor
     }
     return {
         'action_price': json['action_price'] == null ? undefined : MoneyMoneyActionPriceToAutoAddFromJSON(json['action_price']),
+        'action_price_before_auto_add': json['action_price_before_auto_add'] == null ? undefined : MoneyMoneyActionPriceBeforeAutoAddFromJSON(json['action_price_before_auto_add']),
         'add_mode': json['add_mode'] == null ? undefined : ActionsV2ActionsProductsResponseProductAddModeEnumFromJSON(json['add_mode']),
         'alert_max_action_price': json['alert_max_action_price'] == null ? undefined : MoneyMoneyAlertMaxActionPriceFromJSON(json['alert_max_action_price']),
         'alert_max_action_price_failed': json['alert_max_action_price_failed'] == null ? undefined : json['alert_max_action_price_failed'],
@@ -62,6 +64,7 @@ export function ActionsV2ActionsProductsResponseProductToJSON(value) {
     }
     return {
         'action_price': MoneyMoneyActionPriceToAutoAddToJSON(value['action_price']),
+        'action_price_before_auto_add': MoneyMoneyActionPriceBeforeAutoAddToJSON(value['action_price_before_auto_add']),
         'add_mode': ActionsV2ActionsProductsResponseProductAddModeEnumToJSON(value['add_mode']),
         'alert_max_action_price': MoneyMoneyAlertMaxActionPriceToJSON(value['alert_max_action_price']),
         'alert_max_action_price_failed': value['alert_max_action_price_failed'],

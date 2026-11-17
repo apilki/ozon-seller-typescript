@@ -90,6 +90,13 @@ export interface V3PostingProductDetail {
      */
     quantity?: number;
     /**
+     * `true`, если товар можно опломбировать.
+     *
+     * @type {boolean}
+     * @memberof V3PostingProductDetail
+     */
+    sealing_allowed?: boolean;
+    /**
      * Идентификатор товара на Ozon.
      * @type {number}
      * @memberof V3PostingProductDetail

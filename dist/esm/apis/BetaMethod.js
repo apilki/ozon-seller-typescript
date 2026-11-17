@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { AnalyticsV1AnalyticsCategoryComparisonRequestToJSON, AnalyticsV1AnalyticsCategoryComparisonResponseFromJSON, AnalyticsV1AnalyticsDecommissionedGoodsRequestToJSON, AnalyticsV1AnalyticsDecommissionedGoodsResponseFromJSON, AnalyticsV1AnalyticsLocalSaleClustersItemsInfoRequestToJSON, AnalyticsV1AnalyticsLocalSaleClustersItemsInfoResponseFromJSON, AnalyticsV1AnalyticsLocalSaleItemsClustersInfoRequestToJSON, AnalyticsV1AnalyticsLocalSaleItemsClustersInfoResponseFromJSON, AnalyticsV1AnalyticsLocalSaleTotalRequestToJSON, AnalyticsV1AnalyticsLocalSaleTotalResponseFromJSON, CategoryDescriptionV1DescriptionCategoryDependentAttributesRequestToJSON, CategoryDescriptionV1DescriptionCategoryDependentAttributesResponseFromJSON, CategoryDescriptionV1DescriptionCategoryDependentAttributesValuesRequestToJSON, CategoryDescriptionV1DescriptionCategoryDependentAttributesValuesResponseFromJSON, FinanceV1GetFinanceAccrualByDayRequestToJSON, FinanceV1GetFinanceAccrualByDayResponseFromJSON, FinanceV1GetFinanceAccrualPostingsRequestToJSON, FinanceV1GetFinanceAccrualPostingsResponseFromJSON, FinanceV1GetFinanceAccrualTypesResponseFromJSON, PostingV1GetFbpPostingRequestToJSON, PostingV1GetFbpPostingResponseFromJSON, PostingV2PostingDigitalListRequestToJSON, PostingV2PostingDigitalListResponseFromJSON, ProductV1ProductVisibilityInfoRequestToJSON, ProductV1ProductVisibilityInfoResponseFromJSON, ProductV1ProductVisibilitySetRequestToJSON, ProductV1ProductVisibilitySetResponseFromJSON, ReportV1CreateCompanyFinanceRealizationPostingReportRequestToJSON, ReportV1CreateCompanyFinanceRealizationPostingReportResponseFromJSON, SupplyOrderV1SupplyOrderShipmentPlanComplianceGetResponseFromJSON, V1AnalyticsManageStocksRequestToJSON, V1AnalyticsManageStocksResponseFromJSON, V1GetFinanceBalanceV1RequestToJSON, V1GetFinanceBalanceV1ResponseFromJSON, V1GetProductStairwayDiscountByQuantityRequestToJSON, V1GetProductStairwayDiscountByQuantityResponseFromJSON, V1GetSupplierReturnsSummaryReportRequestToJSON, V1GetSupplierReturnsSummaryReportResponseFromJSON, V1GetSupplyReturnsSummaryReportRequestToJSON, V1GetSupplyReturnsSummaryReportResponseFromJSON, V1SetProductStairwayDiscountByQuantityRequestToJSON, V1SetProductStairwayDiscountByQuantityResponseFromJSON, V1WarehouseRfbsReturnPointListRequestToJSON, V1WarehouseRfbsReturnPointListResponseFromJSON, V2GetDiscountTaskListV2RequestToJSON, V2GetDiscountTaskListV2ResponseFromJSON, } from '../models/index';
+import { AnalyticsV1AnalyticsCategoryComparisonRequestToJSON, AnalyticsV1AnalyticsCategoryComparisonResponseFromJSON, AnalyticsV1AnalyticsDecommissionedGoodsRequestToJSON, AnalyticsV1AnalyticsDecommissionedGoodsResponseFromJSON, AnalyticsV1AnalyticsLocalSaleClustersItemsInfoRequestToJSON, AnalyticsV1AnalyticsLocalSaleClustersItemsInfoResponseFromJSON, AnalyticsV1AnalyticsLocalSaleItemsClustersInfoRequestToJSON, AnalyticsV1AnalyticsLocalSaleItemsClustersInfoResponseFromJSON, AnalyticsV1AnalyticsLocalSaleTotalRequestToJSON, AnalyticsV1AnalyticsLocalSaleTotalResponseFromJSON, CategoryDescriptionV1DescriptionCategoryDependentAttributesRequestToJSON, CategoryDescriptionV1DescriptionCategoryDependentAttributesResponseFromJSON, CategoryDescriptionV1DescriptionCategoryDependentAttributesValuesRequestToJSON, CategoryDescriptionV1DescriptionCategoryDependentAttributesValuesResponseFromJSON, FinanceV1GetFinanceAccrualByDayRequestToJSON, FinanceV1GetFinanceAccrualByDayResponseFromJSON, FinanceV1GetFinanceAccrualPostingsRequestToJSON, FinanceV1GetFinanceAccrualPostingsResponseFromJSON, FinanceV1GetFinanceAccrualTypesResponseFromJSON, PostingV1GetFbpPostingRequestToJSON, PostingV1GetFbpPostingResponseFromJSON, PostingV2PostingDigitalListRequestToJSON, PostingV2PostingDigitalListResponseFromJSON, ProductV1ProductMismatchesListRequestToJSON, ProductV1ProductMismatchesListResponseFromJSON, ProductV1ProductVisibilityInfoRequestToJSON, ProductV1ProductVisibilityInfoResponseFromJSON, ProductV1ProductVisibilitySetRequestToJSON, ProductV1ProductVisibilitySetResponseFromJSON, ReportV1CreateFinanceRealizationNumberPostingReportRequestToJSON, ReportV1CreateFinanceRealizationNumberPostingReportResponseFromJSON, ReportV1CreateFinanceRealizationNumberReportRequestToJSON, ReportV1CreateFinanceRealizationNumberReportResponseFromJSON, ReportV1ReportFinanceRealizationListRequestToJSON, ReportV1ReportFinanceRealizationListResponseFromJSON, ReturnV1BoxGetByBarcodeRequestToJSON, ReturnV1BoxGetByBarcodeResponseFromJSON, SupplyOrderV1SupplyOrderShipmentPlanComplianceGetResponseFromJSON, V1AnalyticsManageStocksRequestToJSON, V1AnalyticsManageStocksResponseFromJSON, V1GetFinanceBalanceV1RequestToJSON, V1GetFinanceBalanceV1ResponseFromJSON, V1GetProductStairwayDiscountByQuantityRequestToJSON, V1GetProductStairwayDiscountByQuantityResponseFromJSON, V1GetSupplierReturnsSummaryReportRequestToJSON, V1GetSupplierReturnsSummaryReportResponseFromJSON, V1GetSupplyReturnsSummaryReportRequestToJSON, V1GetSupplyReturnsSummaryReportResponseFromJSON, V1SetProductStairwayDiscountByQuantityRequestToJSON, V1SetProductStairwayDiscountByQuantityResponseFromJSON, V1WarehouseRfbsReturnPointListRequestToJSON, V1WarehouseRfbsReturnPointListResponseFromJSON, V2GetDiscountTaskListV2RequestToJSON, V2GetDiscountTaskListV2ResponseFromJSON, } from '../models/index';
 /**
  *
  */
@@ -291,19 +291,19 @@ export class BetaMethod extends runtime.BaseAPI {
         });
     }
     /**
-     * Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Не включает отмены и невыкупы. Отчёт доступен с настоящего времени по август 2023 года включительно.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2280-Novyi-beta-metod-dlia-polucheniia-otcheta-o-realizatsii-po-postingam/) в сообществе разработчиков Ozon for dev.
-     * Получить позаказный отчёт о реализации товаров
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить идентификатор позаказного отчёта о реализации товаров по номеру
      */
-    createCompanyFinanceRealizationPostingReportRaw(requestParameters, initOverrides) {
+    createFinanceRealizationNumberPostingReportRaw(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             if (requestParameters['clientId'] == null) {
-                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling createCompanyFinanceRealizationPostingReport().');
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling createFinanceRealizationNumberPostingReport().');
             }
             if (requestParameters['apiKey'] == null) {
-                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling createCompanyFinanceRealizationPostingReport().');
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling createFinanceRealizationNumberPostingReport().');
             }
-            if (requestParameters['reportV1CreateCompanyFinanceRealizationPostingReportRequest'] == null) {
-                throw new runtime.RequiredError('reportV1CreateCompanyFinanceRealizationPostingReportRequest', 'Required parameter "reportV1CreateCompanyFinanceRealizationPostingReportRequest" was null or undefined when calling createCompanyFinanceRealizationPostingReport().');
+            if (requestParameters['reportV1CreateFinanceRealizationNumberPostingReportRequest'] == null) {
+                throw new runtime.RequiredError('reportV1CreateFinanceRealizationNumberPostingReportRequest', 'Required parameter "reportV1CreateFinanceRealizationNumberPostingReportRequest" was null or undefined when calling createFinanceRealizationNumberPostingReport().');
             }
             const queryParameters = {};
             const headerParameters = {};
@@ -315,22 +315,66 @@ export class BetaMethod extends runtime.BaseAPI {
                 headerParameters['Api-Key'] = String(requestParameters['apiKey']);
             }
             const response = yield this.request({
-                path: `/v1/report/realization/posting/create`,
+                path: `/v1/report/finance/realization/number/posting/create`,
                 method: 'POST',
                 headers: headerParameters,
                 query: queryParameters,
-                body: ReportV1CreateCompanyFinanceRealizationPostingReportRequestToJSON(requestParameters['reportV1CreateCompanyFinanceRealizationPostingReportRequest']),
+                body: ReportV1CreateFinanceRealizationNumberPostingReportRequestToJSON(requestParameters['reportV1CreateFinanceRealizationNumberPostingReportRequest']),
             }, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => ReportV1CreateCompanyFinanceRealizationPostingReportResponseFromJSON(jsonValue));
+            return new runtime.JSONApiResponse(response, (jsonValue) => ReportV1CreateFinanceRealizationNumberPostingReportResponseFromJSON(jsonValue));
         });
     }
     /**
-     * Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Не включает отмены и невыкупы. Отчёт доступен с настоящего времени по август 2023 года включительно.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2280-Novyi-beta-metod-dlia-polucheniia-otcheta-o-realizatsii-po-postingam/) в сообществе разработчиков Ozon for dev.
-     * Получить позаказный отчёт о реализации товаров
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить идентификатор позаказного отчёта о реализации товаров по номеру
      */
-    createCompanyFinanceRealizationPostingReport(clientId, apiKey, reportV1CreateCompanyFinanceRealizationPostingReportRequest, initOverrides) {
+    createFinanceRealizationNumberPostingReport(clientId, apiKey, reportV1CreateFinanceRealizationNumberPostingReportRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.createCompanyFinanceRealizationPostingReportRaw({ clientId: clientId, apiKey: apiKey, reportV1CreateCompanyFinanceRealizationPostingReportRequest: reportV1CreateCompanyFinanceRealizationPostingReportRequest }, initOverrides);
+            const response = yield this.createFinanceRealizationNumberPostingReportRaw({ clientId: clientId, apiKey: apiKey, reportV1CreateFinanceRealizationNumberPostingReportRequest: reportV1CreateFinanceRealizationNumberPostingReportRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить идентификатор отчёта о реализации товаров по номеру
+     */
+    createFinanceRealizationNumberReportRaw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['clientId'] == null) {
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling createFinanceRealizationNumberReport().');
+            }
+            if (requestParameters['apiKey'] == null) {
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling createFinanceRealizationNumberReport().');
+            }
+            if (requestParameters['reportV1CreateFinanceRealizationNumberReportRequest'] == null) {
+                throw new runtime.RequiredError('reportV1CreateFinanceRealizationNumberReportRequest', 'Required parameter "reportV1CreateFinanceRealizationNumberReportRequest" was null or undefined when calling createFinanceRealizationNumberReport().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (requestParameters['clientId'] != null) {
+                headerParameters['Client-Id'] = String(requestParameters['clientId']);
+            }
+            if (requestParameters['apiKey'] != null) {
+                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
+            }
+            const response = yield this.request({
+                path: `/v1/report/finance/realization/number/create`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: ReportV1CreateFinanceRealizationNumberReportRequestToJSON(requestParameters['reportV1CreateFinanceRealizationNumberReportRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => ReportV1CreateFinanceRealizationNumberReportResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить идентификатор отчёта о реализации товаров по номеру
+     */
+    createFinanceRealizationNumberReport(clientId, apiKey, reportV1CreateFinanceRealizationNumberReportRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.createFinanceRealizationNumberReportRaw({ clientId: clientId, apiKey: apiKey, reportV1CreateFinanceRealizationNumberReportRequest: reportV1CreateFinanceRealizationNumberReportRequest }, initOverrides);
             return yield response.value();
         });
     }
@@ -872,6 +916,50 @@ export class BetaMethod extends runtime.BaseAPI {
         });
     }
     /**
+     * Метод возвращает информацию о несоответствиях характеристик товаров.<br>[Подробнее о несоответствиях в Базе знаний продавца](https://seller-edu.ozon.ru/libra/work-with-goods/zagruzka-tovarov/creating-goods/oshibki-pri-rabote-s-kartochkami#несоответствия-между-полями-карточки)  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2232-Novyi-metod-polucheniia-nesootvetstvii-po-tovaram/) в сообществе разработчиков Ozon for dev.
+     * Получить несоответствия характеристик товаров
+     */
+    productMismatchesListRaw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['clientId'] == null) {
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling productMismatchesList().');
+            }
+            if (requestParameters['apiKey'] == null) {
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling productMismatchesList().');
+            }
+            if (requestParameters['productV1ProductMismatchesListRequest'] == null) {
+                throw new runtime.RequiredError('productV1ProductMismatchesListRequest', 'Required parameter "productV1ProductMismatchesListRequest" was null or undefined when calling productMismatchesList().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (requestParameters['clientId'] != null) {
+                headerParameters['Client-Id'] = String(requestParameters['clientId']);
+            }
+            if (requestParameters['apiKey'] != null) {
+                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
+            }
+            const response = yield this.request({
+                path: `/v1/product/mismatches/list`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: ProductV1ProductMismatchesListRequestToJSON(requestParameters['productV1ProductMismatchesListRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => ProductV1ProductMismatchesListResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Метод возвращает информацию о несоответствиях характеристик товаров.<br>[Подробнее о несоответствиях в Базе знаний продавца](https://seller-edu.ozon.ru/libra/work-with-goods/zagruzka-tovarov/creating-goods/oshibki-pri-rabote-s-kartochkami#несоответствия-между-полями-карточки)  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2232-Novyi-metod-polucheniia-nesootvetstvii-po-tovaram/) в сообществе разработчиков Ozon for dev.
+     * Получить несоответствия характеристик товаров
+     */
+    productMismatchesList(clientId, apiKey, productV1ProductMismatchesListRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.productMismatchesListRaw({ clientId: clientId, apiKey: apiKey, productV1ProductMismatchesListRequest: productV1ProductMismatchesListRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
      * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1951-Novyi-metod-upravleniia-vidimostiu-na-vitrinakh/) в сообществе разработчиков Ozon for dev.
      * Получить информацию о видимости товара
      */
@@ -938,6 +1026,82 @@ export class BetaMethod extends runtime.BaseAPI {
     productVisibilitySet(productV1ProductVisibilitySetRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.productVisibilitySetRaw({ productV1ProductVisibilitySetRequest: productV1ProductVisibilitySetRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
+     * Отчёты доступны с настоящего времени по сентябрь 2023 года включительно.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить список номеров отчётов о реализации товаров
+     */
+    reportFinanceRealizationListRaw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['clientId'] == null) {
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling reportFinanceRealizationList().');
+            }
+            if (requestParameters['apiKey'] == null) {
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling reportFinanceRealizationList().');
+            }
+            if (requestParameters['reportV1ReportFinanceRealizationListRequest'] == null) {
+                throw new runtime.RequiredError('reportV1ReportFinanceRealizationListRequest', 'Required parameter "reportV1ReportFinanceRealizationListRequest" was null or undefined when calling reportFinanceRealizationList().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (requestParameters['clientId'] != null) {
+                headerParameters['Client-Id'] = String(requestParameters['clientId']);
+            }
+            if (requestParameters['apiKey'] != null) {
+                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
+            }
+            const response = yield this.request({
+                path: `/v1/report/finance/realization/list`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: ReportV1ReportFinanceRealizationListRequestToJSON(requestParameters['reportV1ReportFinanceRealizationListRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => ReportV1ReportFinanceRealizationListResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Отчёты доступны с настоящего времени по сентябрь 2023 года включительно.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить список номеров отчётов о реализации товаров
+     */
+    reportFinanceRealizationList(clientId, apiKey, reportV1ReportFinanceRealizationListRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.reportFinanceRealizationListRaw({ clientId: clientId, apiKey: apiKey, reportV1ReportFinanceRealizationListRequest: reportV1ReportFinanceRealizationListRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2177-Novyi-metod-dlia-polucheniia-ostatkov-FBO/) в сообществе разработчиков Ozon for dev.
+     * Получить информацию о возвратных коробках по штрихкоду с этикетки
+     */
+    returnAPIBoxGetByBarcodeRaw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['returnV1BoxGetByBarcodeRequest'] == null) {
+                throw new runtime.RequiredError('returnV1BoxGetByBarcodeRequest', 'Required parameter "returnV1BoxGetByBarcodeRequest" was null or undefined when calling returnAPIBoxGetByBarcode().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/v1/return/box/get-by-barcode`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: ReturnV1BoxGetByBarcodeRequestToJSON(requestParameters['returnV1BoxGetByBarcodeRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => ReturnV1BoxGetByBarcodeResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2177-Novyi-metod-dlia-polucheniia-ostatkov-FBO/) в сообществе разработчиков Ozon for dev.
+     * Получить информацию о возвратных коробках по штрихкоду с этикетки
+     */
+    returnAPIBoxGetByBarcode(returnV1BoxGetByBarcodeRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.returnAPIBoxGetByBarcodeRaw({ returnV1BoxGetByBarcodeRequest: returnV1BoxGetByBarcodeRequest }, initOverrides);
             return yield response.value();
         });
     }

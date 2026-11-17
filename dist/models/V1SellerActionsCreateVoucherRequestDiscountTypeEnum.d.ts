@@ -10,15 +10,12 @@
  * Do not edit the class manually.
  */
 /**
- * Тип скидки:
- *  - `PERCENT` — скидка в процентах;
- *  - `CURRENCY` — скидка в валюте.
+ * Тип скидки: `PERCENT` — скидка в процентах.
  *
  * @export
  */
 export declare const V1SellerActionsCreateVoucherRequestDiscountTypeEnum: {
     readonly PERCENT: "PERCENT";
-    readonly CURRENCY: "CURRENCY";
 };
 export type V1SellerActionsCreateVoucherRequestDiscountTypeEnum = typeof V1SellerActionsCreateVoucherRequestDiscountTypeEnum[keyof typeof V1SellerActionsCreateVoucherRequestDiscountTypeEnum];
 export declare function instanceOfV1SellerActionsCreateVoucherRequestDiscountTypeEnum(value: any): boolean;

@@ -20,6 +20,7 @@ exports.GetProductInfoPricesResponseItemPriceIndexesFromJSONTyped = GetProductIn
 exports.GetProductInfoPricesResponseItemPriceIndexesToJSON = GetProductInfoPricesResponseItemPriceIndexesToJSON;
 const PriceIndexesIndexExternalData_1 = require("./PriceIndexesIndexExternalData");
 const PriceIndexesIndexSelfData_1 = require("./PriceIndexesIndexSelfData");
+const ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndex_1 = require("./ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndex");
 const PriceIndexesIndexOzonData_1 = require("./PriceIndexesIndexOzonData");
 /**
  * @export
@@ -46,6 +47,7 @@ function GetProductInfoPricesResponseItemPriceIndexesFromJSONTyped(json, ignoreD
     }
     return {
         'color_index': json['color_index'] == null ? undefined : json['color_index'],
+        'competitor_index_data': json['competitor_index_data'] == null ? undefined : (0, ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndex_1.ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndexFromJSON)(json['competitor_index_data']),
         'external_index_data': json['external_index_data'] == null ? undefined : (0, PriceIndexesIndexExternalData_1.PriceIndexesIndexExternalDataFromJSON)(json['external_index_data']),
         'ozon_index_data': json['ozon_index_data'] == null ? undefined : (0, PriceIndexesIndexOzonData_1.PriceIndexesIndexOzonDataFromJSON)(json['ozon_index_data']),
         'self_marketplaces_index_data': json['self_marketplaces_index_data'] == null ? undefined : (0, PriceIndexesIndexSelfData_1.PriceIndexesIndexSelfDataFromJSON)(json['self_marketplaces_index_data']),
@@ -57,6 +59,7 @@ function GetProductInfoPricesResponseItemPriceIndexesToJSON(value) {
     }
     return {
         'color_index': value['color_index'],
+        'competitor_index_data': (0, ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndex_1.ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndexToJSON)(value['competitor_index_data']),
         'external_index_data': (0, PriceIndexesIndexExternalData_1.PriceIndexesIndexExternalDataToJSON)(value['external_index_data']),
         'ozon_index_data': (0, PriceIndexesIndexOzonData_1.PriceIndexesIndexOzonDataToJSON)(value['ozon_index_data']),
         'self_marketplaces_index_data': (0, PriceIndexesIndexSelfData_1.PriceIndexesIndexSelfDataToJSON)(value['self_marketplaces_index_data']),

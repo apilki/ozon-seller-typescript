@@ -181,8 +181,9 @@ class CertificationAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * <aside class=\"warning\"> 28 сентября 2026 года отключим параметры <code>page</code> и <code>page_size</code> в запросе метода. Используйте параметры <code>last_id</code> и <code>limit</code>. </aside>
+     * <aside class=\"warning\"> 12 декабря 2026 года отключим метод. Переключитесь на <a href=\"#operation/ProductCertificateProductsListV2\">/v2/product/certificate/products/list</a>. </aside>
      * Список товаров, привязанных к сертификату
+     * @deprecated
      */
     certificateProductsListRaw(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -215,8 +216,9 @@ class CertificationAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * <aside class=\"warning\"> 28 сентября 2026 года отключим параметры <code>page</code> и <code>page_size</code> в запросе метода. Используйте параметры <code>last_id</code> и <code>limit</code>. </aside>
+     * <aside class=\"warning\"> 12 декабря 2026 года отключим метод. Переключитесь на <a href=\"#operation/ProductCertificateProductsListV2\">/v2/product/certificate/products/list</a>. </aside>
      * Список товаров, привязанных к сертификату
+     * @deprecated
      */
     certificateProductsList(clientId, apiKey, v1ProductCertificateProductsListRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -723,6 +725,48 @@ class CertificationAPI extends runtime.BaseAPI {
     productCertificateParams(clientId, apiKey, certificationV2ProductCertificateParamsRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.productCertificateParamsRaw({ clientId: clientId, apiKey: apiKey, certificationV2ProductCertificateParamsRequest: certificationV2ProductCertificateParamsRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
+     * Получить список товаров, которые привязаны к сертификату
+     */
+    productCertificateProductsListV2Raw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['clientId'] == null) {
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling productCertificateProductsListV2().');
+            }
+            if (requestParameters['apiKey'] == null) {
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling productCertificateProductsListV2().');
+            }
+            if (requestParameters['certificationV2ProductCertificateProductsListV2Request'] == null) {
+                throw new runtime.RequiredError('certificationV2ProductCertificateProductsListV2Request', 'Required parameter "certificationV2ProductCertificateProductsListV2Request" was null or undefined when calling productCertificateProductsListV2().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (requestParameters['clientId'] != null) {
+                headerParameters['Client-Id'] = String(requestParameters['clientId']);
+            }
+            if (requestParameters['apiKey'] != null) {
+                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
+            }
+            const response = yield this.request({
+                path: `/v2/product/certificate/products/list`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: (0, index_1.CertificationV2ProductCertificateProductsListV2RequestToJSON)(requestParameters['certificationV2ProductCertificateProductsListV2Request']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.CertificationV2ProductCertificateProductsListV2ResponseFromJSON)(jsonValue));
+        });
+    }
+    /**
+     * Получить список товаров, которые привязаны к сертификату
+     */
+    productCertificateProductsListV2(clientId, apiKey, certificationV2ProductCertificateProductsListV2Request, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.productCertificateProductsListV2Raw({ clientId: clientId, apiKey: apiKey, certificationV2ProductCertificateProductsListV2Request: certificationV2ProductCertificateProductsListV2Request }, initOverrides);
             return yield response.value();
         });
     }

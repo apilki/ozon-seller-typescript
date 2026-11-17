@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { AnalyticsV1AnalyticsCategoryComparisonRequest, AnalyticsV1AnalyticsCategoryComparisonResponse, AnalyticsV1AnalyticsDecommissionedGoodsRequest, AnalyticsV1AnalyticsDecommissionedGoodsResponse, AnalyticsV1AnalyticsLocalSaleClustersItemsInfoRequest, AnalyticsV1AnalyticsLocalSaleClustersItemsInfoResponse, AnalyticsV1AnalyticsLocalSaleItemsClustersInfoRequest, AnalyticsV1AnalyticsLocalSaleItemsClustersInfoResponse, AnalyticsV1AnalyticsLocalSaleTotalRequest, AnalyticsV1AnalyticsLocalSaleTotalResponse, CategoryDescriptionV1DescriptionCategoryDependentAttributesRequest, CategoryDescriptionV1DescriptionCategoryDependentAttributesResponse, CategoryDescriptionV1DescriptionCategoryDependentAttributesValuesRequest, CategoryDescriptionV1DescriptionCategoryDependentAttributesValuesResponse, FinanceV1GetFinanceAccrualByDayRequest, FinanceV1GetFinanceAccrualByDayResponse, FinanceV1GetFinanceAccrualPostingsRequest, FinanceV1GetFinanceAccrualPostingsResponse, FinanceV1GetFinanceAccrualTypesResponse, PostingV1GetFbpPostingRequest, PostingV1GetFbpPostingResponse, PostingV2PostingDigitalListRequest, PostingV2PostingDigitalListResponse, ProductV1ProductVisibilityInfoRequest, ProductV1ProductVisibilityInfoResponse, ProductV1ProductVisibilitySetRequest, ProductV1ProductVisibilitySetResponse, ReportV1CreateCompanyFinanceRealizationPostingReportRequest, ReportV1CreateCompanyFinanceRealizationPostingReportResponse, SupplyOrderV1SupplyOrderShipmentPlanComplianceGetResponse, V1AnalyticsManageStocksRequest, V1AnalyticsManageStocksResponse, V1GetFinanceBalanceV1Request, V1GetFinanceBalanceV1Response, V1GetProductStairwayDiscountByQuantityRequest, V1GetProductStairwayDiscountByQuantityResponse, V1GetSupplierReturnsSummaryReportRequest, V1GetSupplierReturnsSummaryReportResponse, V1GetSupplyReturnsSummaryReportRequest, V1GetSupplyReturnsSummaryReportResponse, V1SetProductStairwayDiscountByQuantityRequest, V1SetProductStairwayDiscountByQuantityResponse, V1WarehouseRfbsReturnPointListRequest, V1WarehouseRfbsReturnPointListResponse, V2GetDiscountTaskListV2Request, V2GetDiscountTaskListV2Response } from '../models/index';
+import type { AnalyticsV1AnalyticsCategoryComparisonRequest, AnalyticsV1AnalyticsCategoryComparisonResponse, AnalyticsV1AnalyticsDecommissionedGoodsRequest, AnalyticsV1AnalyticsDecommissionedGoodsResponse, AnalyticsV1AnalyticsLocalSaleClustersItemsInfoRequest, AnalyticsV1AnalyticsLocalSaleClustersItemsInfoResponse, AnalyticsV1AnalyticsLocalSaleItemsClustersInfoRequest, AnalyticsV1AnalyticsLocalSaleItemsClustersInfoResponse, AnalyticsV1AnalyticsLocalSaleTotalRequest, AnalyticsV1AnalyticsLocalSaleTotalResponse, CategoryDescriptionV1DescriptionCategoryDependentAttributesRequest, CategoryDescriptionV1DescriptionCategoryDependentAttributesResponse, CategoryDescriptionV1DescriptionCategoryDependentAttributesValuesRequest, CategoryDescriptionV1DescriptionCategoryDependentAttributesValuesResponse, FinanceV1GetFinanceAccrualByDayRequest, FinanceV1GetFinanceAccrualByDayResponse, FinanceV1GetFinanceAccrualPostingsRequest, FinanceV1GetFinanceAccrualPostingsResponse, FinanceV1GetFinanceAccrualTypesResponse, PostingV1GetFbpPostingRequest, PostingV1GetFbpPostingResponse, PostingV2PostingDigitalListRequest, PostingV2PostingDigitalListResponse, ProductV1ProductMismatchesListRequest, ProductV1ProductMismatchesListResponse, ProductV1ProductVisibilityInfoRequest, ProductV1ProductVisibilityInfoResponse, ProductV1ProductVisibilitySetRequest, ProductV1ProductVisibilitySetResponse, ReportV1CreateFinanceRealizationNumberPostingReportRequest, ReportV1CreateFinanceRealizationNumberPostingReportResponse, ReportV1CreateFinanceRealizationNumberReportRequest, ReportV1CreateFinanceRealizationNumberReportResponse, ReportV1ReportFinanceRealizationListRequest, ReportV1ReportFinanceRealizationListResponse, ReturnV1BoxGetByBarcodeRequest, ReturnV1BoxGetByBarcodeResponse, SupplyOrderV1SupplyOrderShipmentPlanComplianceGetResponse, V1AnalyticsManageStocksRequest, V1AnalyticsManageStocksResponse, V1GetFinanceBalanceV1Request, V1GetFinanceBalanceV1Response, V1GetProductStairwayDiscountByQuantityRequest, V1GetProductStairwayDiscountByQuantityResponse, V1GetSupplierReturnsSummaryReportRequest, V1GetSupplierReturnsSummaryReportResponse, V1GetSupplyReturnsSummaryReportRequest, V1GetSupplyReturnsSummaryReportResponse, V1SetProductStairwayDiscountByQuantityRequest, V1SetProductStairwayDiscountByQuantityResponse, V1WarehouseRfbsReturnPointListRequest, V1WarehouseRfbsReturnPointListResponse, V2GetDiscountTaskListV2Request, V2GetDiscountTaskListV2Response } from '../models/index';
 export interface AnalyticsAPIManageStocksRequest {
     clientId: string;
     apiKey: string;
@@ -41,10 +41,15 @@ export interface AnalyticsLocalSaleTotalRequest {
     apiKey: string;
     analyticsV1AnalyticsLocalSaleTotalRequest: AnalyticsV1AnalyticsLocalSaleTotalRequest;
 }
-export interface CreateCompanyFinanceRealizationPostingReportRequest {
+export interface CreateFinanceRealizationNumberPostingReportRequest {
     clientId: string;
     apiKey: string;
-    reportV1CreateCompanyFinanceRealizationPostingReportRequest: ReportV1CreateCompanyFinanceRealizationPostingReportRequest;
+    reportV1CreateFinanceRealizationNumberPostingReportRequest: ReportV1CreateFinanceRealizationNumberPostingReportRequest;
+}
+export interface CreateFinanceRealizationNumberReportRequest {
+    clientId: string;
+    apiKey: string;
+    reportV1CreateFinanceRealizationNumberReportRequest: ReportV1CreateFinanceRealizationNumberReportRequest;
 }
 export interface DescriptionCategoryDependentAttributesRequest {
     clientId: string;
@@ -106,6 +111,11 @@ export interface ProductAPISetProductStairwayDiscountByQuantityRequest {
     apiKey: string;
     v1SetProductStairwayDiscountByQuantityRequest: V1SetProductStairwayDiscountByQuantityRequest;
 }
+export interface ProductMismatchesListRequest {
+    clientId: string;
+    apiKey: string;
+    productV1ProductMismatchesListRequest: ProductV1ProductMismatchesListRequest;
+}
 export interface ProductVisibilityInfoRequest {
     clientId: string;
     apiKey: string;
@@ -113,6 +123,14 @@ export interface ProductVisibilityInfoRequest {
 }
 export interface ProductVisibilitySetRequest {
     productV1ProductVisibilitySetRequest?: ProductV1ProductVisibilitySetRequest;
+}
+export interface ReportFinanceRealizationListRequest {
+    clientId: string;
+    apiKey: string;
+    reportV1ReportFinanceRealizationListRequest: ReportV1ReportFinanceRealizationListRequest;
+}
+export interface ReturnAPIBoxGetByBarcodeRequest {
+    returnV1BoxGetByBarcodeRequest: ReturnV1BoxGetByBarcodeRequest;
 }
 export interface SupplyOrderShipmentPlanComplianceGetRequest {
     clientId: string;
@@ -188,15 +206,25 @@ export declare class BetaMethod extends runtime.BaseAPI {
      */
     analyticsLocalSaleTotal(clientId: string, apiKey: string, analyticsV1AnalyticsLocalSaleTotalRequest: AnalyticsV1AnalyticsLocalSaleTotalRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AnalyticsV1AnalyticsLocalSaleTotalResponse>;
     /**
-     * Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Не включает отмены и невыкупы. Отчёт доступен с настоящего времени по август 2023 года включительно.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2280-Novyi-beta-metod-dlia-polucheniia-otcheta-o-realizatsii-po-postingam/) в сообществе разработчиков Ozon for dev.
-     * Получить позаказный отчёт о реализации товаров
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить идентификатор позаказного отчёта о реализации товаров по номеру
      */
-    createCompanyFinanceRealizationPostingReportRaw(requestParameters: CreateCompanyFinanceRealizationPostingReportRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ReportV1CreateCompanyFinanceRealizationPostingReportResponse>>;
+    createFinanceRealizationNumberPostingReportRaw(requestParameters: CreateFinanceRealizationNumberPostingReportRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ReportV1CreateFinanceRealizationNumberPostingReportResponse>>;
     /**
-     * Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Не включает отмены и невыкупы. Отчёт доступен с настоящего времени по август 2023 года включительно.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2280-Novyi-beta-metod-dlia-polucheniia-otcheta-o-realizatsii-po-postingam/) в сообществе разработчиков Ozon for dev.
-     * Получить позаказный отчёт о реализации товаров
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить идентификатор позаказного отчёта о реализации товаров по номеру
      */
-    createCompanyFinanceRealizationPostingReport(clientId: string, apiKey: string, reportV1CreateCompanyFinanceRealizationPostingReportRequest: ReportV1CreateCompanyFinanceRealizationPostingReportRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ReportV1CreateCompanyFinanceRealizationPostingReportResponse>;
+    createFinanceRealizationNumberPostingReport(clientId: string, apiKey: string, reportV1CreateFinanceRealizationNumberPostingReportRequest: ReportV1CreateFinanceRealizationNumberPostingReportRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ReportV1CreateFinanceRealizationNumberPostingReportResponse>;
+    /**
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить идентификатор отчёта о реализации товаров по номеру
+     */
+    createFinanceRealizationNumberReportRaw(requestParameters: CreateFinanceRealizationNumberReportRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ReportV1CreateFinanceRealizationNumberReportResponse>>;
+    /**
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить идентификатор отчёта о реализации товаров по номеру
+     */
+    createFinanceRealizationNumberReport(clientId: string, apiKey: string, reportV1CreateFinanceRealizationNumberReportRequest: ReportV1CreateFinanceRealizationNumberReportRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ReportV1CreateFinanceRealizationNumberReportResponse>;
     /**
      * Возвращает пары идентификаторов родительской и дочерней характеристик. Получите возможные значения дочерней характеристики для значений родительской методом [/v1/description-category/dependent-attributes/values](#operation/DescriptionCategoryDependentAttributesValues).  Характеристика с `parent_attribute_id = 8229` — это идентификатор типа товара `type_id`. Не указывайте её в параметре `items.attributes.id` в запросах к методам [/v3/product/import](#operation/ProductAPI_ImportProductsV3) и [/v1/product/attributes/update](#operation/ProductAPI_ProductUpdateAttributes).  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2296-Novye-metody-zavisimykh-atributov/) в сообществе разработчиков Ozon for dev.
      * Получить зависимые характеристики
@@ -328,6 +356,16 @@ export declare class BetaMethod extends runtime.BaseAPI {
      */
     productAPISetProductStairwayDiscountByQuantity(clientId: string, apiKey: string, v1SetProductStairwayDiscountByQuantityRequest: V1SetProductStairwayDiscountByQuantityRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1SetProductStairwayDiscountByQuantityResponse>;
     /**
+     * Метод возвращает информацию о несоответствиях характеристик товаров.<br>[Подробнее о несоответствиях в Базе знаний продавца](https://seller-edu.ozon.ru/libra/work-with-goods/zagruzka-tovarov/creating-goods/oshibki-pri-rabote-s-kartochkami#несоответствия-между-полями-карточки)  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2232-Novyi-metod-polucheniia-nesootvetstvii-po-tovaram/) в сообществе разработчиков Ozon for dev.
+     * Получить несоответствия характеристик товаров
+     */
+    productMismatchesListRaw(requestParameters: ProductMismatchesListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ProductV1ProductMismatchesListResponse>>;
+    /**
+     * Метод возвращает информацию о несоответствиях характеристик товаров.<br>[Подробнее о несоответствиях в Базе знаний продавца](https://seller-edu.ozon.ru/libra/work-with-goods/zagruzka-tovarov/creating-goods/oshibki-pri-rabote-s-kartochkami#несоответствия-между-полями-карточки)  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2232-Novyi-metod-polucheniia-nesootvetstvii-po-tovaram/) в сообществе разработчиков Ozon for dev.
+     * Получить несоответствия характеристик товаров
+     */
+    productMismatchesList(clientId: string, apiKey: string, productV1ProductMismatchesListRequest: ProductV1ProductMismatchesListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ProductV1ProductMismatchesListResponse>;
+    /**
      * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/1951-Novyi-metod-upravleniia-vidimostiu-na-vitrinakh/) в сообществе разработчиков Ozon for dev.
      * Получить информацию о видимости товара
      */
@@ -347,6 +385,26 @@ export declare class BetaMethod extends runtime.BaseAPI {
      * Настроить видимость товара на витрине Ozon и Ozon Селект
      */
     productVisibilitySet(productV1ProductVisibilitySetRequest?: ProductV1ProductVisibilitySetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ProductV1ProductVisibilitySetResponse>;
+    /**
+     * Отчёты доступны с настоящего времени по сентябрь 2023 года включительно.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить список номеров отчётов о реализации товаров
+     */
+    reportFinanceRealizationListRaw(requestParameters: ReportFinanceRealizationListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ReportV1ReportFinanceRealizationListResponse>>;
+    /**
+     * Отчёты доступны с настоящего времени по сентябрь 2023 года включительно.  Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2481-Novye-metody-dlia-polucheniia-otcheta-o-realizatsii-i-pozakaznnogo-otchet-o-realizatsii/) в сообществе разработчиков Ozon for dev.
+     * Получить список номеров отчётов о реализации товаров
+     */
+    reportFinanceRealizationList(clientId: string, apiKey: string, reportV1ReportFinanceRealizationListRequest: ReportV1ReportFinanceRealizationListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ReportV1ReportFinanceRealizationListResponse>;
+    /**
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2177-Novyi-metod-dlia-polucheniia-ostatkov-FBO/) в сообществе разработчиков Ozon for dev.
+     * Получить информацию о возвратных коробках по штрихкоду с этикетки
+     */
+    returnAPIBoxGetByBarcodeRaw(requestParameters: ReturnAPIBoxGetByBarcodeRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ReturnV1BoxGetByBarcodeResponse>>;
+    /**
+     * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2177-Novyi-metod-dlia-polucheniia-ostatkov-FBO/) в сообществе разработчиков Ozon for dev.
+     * Получить информацию о возвратных коробках по штрихкоду с этикетки
+     */
+    returnAPIBoxGetByBarcode(returnV1BoxGetByBarcodeRequest: ReturnV1BoxGetByBarcodeRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ReturnV1BoxGetByBarcodeResponse>;
     /**
      * Вы можете оставить обратную связь о работе метода в [комментариях](https://dev.ozon.ru/community/2383-Novyi-metod-dlia-polucheniia-informatsii-o-sobliudenii-plana-otgruzok/) в сообществе разработчиков Ozon for dev.
      * Получить информацию о выполнении плана отгрузок

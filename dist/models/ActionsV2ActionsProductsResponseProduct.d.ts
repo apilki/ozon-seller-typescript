@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import type { MoneyMoneyPriceMaxElastic } from './MoneyMoneyPriceMaxElastic';
+import type { MoneyMoneyActionPriceBeforeAutoAdd } from './MoneyMoneyActionPriceBeforeAutoAdd';
 import type { ActionsV2ActionsProductsResponseProductProductWebsitePrices } from './ActionsV2ActionsProductsResponseProductProductWebsitePrices';
 import type { MoneyMoneyFBPget } from './MoneyMoneyFBPget';
 import type { MoneyMoneyActionPriceToAutoAdd } from './MoneyMoneyActionPriceToAutoAdd';
@@ -31,6 +32,12 @@ export interface ActionsV2ActionsProductsResponseProduct {
      * @memberof ActionsV2ActionsProductsResponseProduct
      */
     action_price?: MoneyMoneyActionPriceToAutoAdd;
+    /**
+     *
+     * @type {MoneyMoneyActionPriceBeforeAutoAdd}
+     * @memberof ActionsV2ActionsProductsResponseProduct
+     */
+    action_price_before_auto_add?: MoneyMoneyActionPriceBeforeAutoAdd;
     /**
      *
      * @type {ActionsV2ActionsProductsResponseProductAddModeEnum}

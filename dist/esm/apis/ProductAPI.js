@@ -21,43 +21,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { ProductBooleanResponseFromJSON, ProductGetImportProductsInfoRequestToJSON, ProductGetImportProductsInfoResponseFromJSON, ProductGetProductInfoDescriptionRequestToJSON, ProductGetProductInfoDescriptionResponseFromJSON, ProductImportProductsBySKURequestToJSON, ProductImportProductsBySKUResponseFromJSON, ProductProductArchiveRequestToJSON, ProductProductUnarchiveRequestToJSON, ProductV1GetProductInfoStocksByWarehouseFboRequestToJSON, ProductV1GetProductInfoStocksByWarehouseFboResponseFromJSON, ProductV2ProductImportPicturesV2RequestToJSON, ProductV2ProductInfoPicturesV2ResponseFromJSON, Productv1ProductImportPicturesRequestToJSON, Productv1ProductInfoPicturesResponseFromJSON, Productv2DeleteProductsRequestToJSON, Productv2DeleteProductsResponseFromJSON, Productv3GetProductListRequestToJSON, Productv3GetProductListResponseFromJSON, Productv4GetProductAttributesV4RequestToJSON, Productv4GetProductAttributesV4ResponseFromJSON, V1GetProductInfoSubscriptionRequestToJSON, V1GetProductInfoSubscriptionResponseFromJSON, V1GetProductRatingBySkuRequestToJSON, V1GetProductRatingBySkuResponseFromJSON, V1ProductGetRelatedSKURequestToJSON, V1ProductGetRelatedSKUResponseFromJSON, V1ProductInfoWrongVolumeRequestToJSON, V1ProductInfoWrongVolumeResponseFromJSON, V1ProductUpdateAttributesRequestToJSON, V1ProductUpdateAttributesResponseFromJSON, V1ProductUpdateOfferIdRequestToJSON, V1ProductUpdateOfferIdResponseFromJSON, V2ProductInfoPicturesRequestToJSON, V2ProductInfoPicturesResponseFromJSON, V3GetProductInfoListRequestToJSON, V3GetProductInfoListResponseFromJSON, V3ImportProductsRequestToJSON, V3ImportProductsResponseFromJSON, V4GetUploadQuotaResponseFromJSON, } from '../models/index';
+import { ProductBooleanResponseFromJSON, ProductGetImportProductsInfoRequestToJSON, ProductGetImportProductsInfoResponseFromJSON, ProductGetProductInfoDescriptionRequestToJSON, ProductGetProductInfoDescriptionResponseFromJSON, ProductImportProductsBySKURequestToJSON, ProductImportProductsBySKUResponseFromJSON, ProductProductArchiveRequestToJSON, ProductProductUnarchiveRequestToJSON, ProductV2ProductImportPicturesV2RequestToJSON, ProductV2ProductInfoPicturesV2ResponseFromJSON, Productv1ProductImportPicturesRequestToJSON, Productv1ProductInfoPicturesResponseFromJSON, Productv2DeleteProductsRequestToJSON, Productv2DeleteProductsResponseFromJSON, Productv3GetProductListRequestToJSON, Productv3GetProductListResponseFromJSON, Productv4GetProductAttributesV4RequestToJSON, Productv4GetProductAttributesV4ResponseFromJSON, V1GetProductInfoSubscriptionRequestToJSON, V1GetProductInfoSubscriptionResponseFromJSON, V1GetProductRatingBySkuRequestToJSON, V1GetProductRatingBySkuResponseFromJSON, V1ProductGetRelatedSKURequestToJSON, V1ProductGetRelatedSKUResponseFromJSON, V1ProductInfoWrongVolumeRequestToJSON, V1ProductInfoWrongVolumeResponseFromJSON, V1ProductUpdateAttributesRequestToJSON, V1ProductUpdateAttributesResponseFromJSON, V1ProductUpdateOfferIdRequestToJSON, V1ProductUpdateOfferIdResponseFromJSON, V2ProductInfoPicturesRequestToJSON, V2ProductInfoPicturesResponseFromJSON, V3GetProductInfoListRequestToJSON, V3GetProductInfoListResponseFromJSON, V3ImportProductsRequestToJSON, V3ImportProductsResponseFromJSON, V4GetUploadQuotaResponseFromJSON, } from '../models/index';
 /**
  *
  */
 export class ProductAPI extends runtime.BaseAPI {
-    /**
-     * Передайте в запросе `offer_ids` или `skus`.  Вы можете оставить обратную связь по этому методу в комментариях к [обсуждению](https://dev.ozon.ru/community/2177-Novyi-metod-dlia-polucheniia-ostatkov-FBO/) в сообществе разработчиков Ozon for dev.
-     * Получить информацию о стоках на складах FBO
-     */
-    getProductInfoStocksByWarehouseFboRaw(requestParameters, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (requestParameters['productV1GetProductInfoStocksByWarehouseFboRequest'] == null) {
-                throw new runtime.RequiredError('productV1GetProductInfoStocksByWarehouseFboRequest', 'Required parameter "productV1GetProductInfoStocksByWarehouseFboRequest" was null or undefined when calling getProductInfoStocksByWarehouseFbo().');
-            }
-            const queryParameters = {};
-            const headerParameters = {};
-            headerParameters['Content-Type'] = 'application/json';
-            const response = yield this.request({
-                path: `/v1/product/info/stocks-by-warehouse/fbo`,
-                method: 'POST',
-                headers: headerParameters,
-                query: queryParameters,
-                body: ProductV1GetProductInfoStocksByWarehouseFboRequestToJSON(requestParameters['productV1GetProductInfoStocksByWarehouseFboRequest']),
-            }, initOverrides);
-            return new runtime.JSONApiResponse(response, (jsonValue) => ProductV1GetProductInfoStocksByWarehouseFboResponseFromJSON(jsonValue));
-        });
-    }
-    /**
-     * Передайте в запросе `offer_ids` или `skus`.  Вы можете оставить обратную связь по этому методу в комментариях к [обсуждению](https://dev.ozon.ru/community/2177-Novyi-metod-dlia-polucheniia-ostatkov-FBO/) в сообществе разработчиков Ozon for dev.
-     * Получить информацию о стоках на складах FBO
-     */
-    getProductInfoStocksByWarehouseFbo(productV1GetProductInfoStocksByWarehouseFboRequest, initOverrides) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.getProductInfoStocksByWarehouseFboRaw({ productV1GetProductInfoStocksByWarehouseFboRequest: productV1GetProductInfoStocksByWarehouseFboRequest }, initOverrides);
-            return yield response.value();
-        });
-    }
     /**
      * В одном запросе можно передать до 500 идентификаторов.
      * Удалить товар без SKU из архива

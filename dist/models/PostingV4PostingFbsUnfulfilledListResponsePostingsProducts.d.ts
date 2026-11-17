@@ -69,6 +69,13 @@ export interface PostingV4PostingFbsUnfulfilledListResponsePostingsProducts {
      */
     quantity?: number;
     /**
+     * `true`, если товар можно опломбировать.
+     *
+     * @type {boolean}
+     * @memberof PostingV4PostingFbsUnfulfilledListResponsePostingsProducts
+     */
+    sealing_allowed?: boolean;
+    /**
      * Идентификатор товара в системе Ozon — SKU.
      * @type {number}
      * @memberof PostingV4PostingFbsUnfulfilledListResponsePostingsProducts

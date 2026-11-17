@@ -124,6 +124,38 @@ class OrderAPI extends runtime.BaseAPI {
         });
     }
     /**
+     * Метод возвращает код выдачи заказа для покупателя. Используйте полученный код, чтобы сформировать QR-код.
+     * Получить код выдачи заказа
+     */
+    orderAPIOrderCodeGetRaw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['orderV1OrderCodeGetRequest'] == null) {
+                throw new runtime.RequiredError('orderV1OrderCodeGetRequest', 'Required parameter "orderV1OrderCodeGetRequest" was null or undefined when calling orderAPIOrderCodeGet().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            const response = yield this.request({
+                path: `/v1/order/code/get`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: (0, index_1.OrderV1OrderCodeGetRequestToJSON)(requestParameters['orderV1OrderCodeGetRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => (0, index_1.OrderV1OrderCodeGetResponseFromJSON)(jsonValue));
+        });
+    }
+    /**
+     * Метод возвращает код выдачи заказа для покупателя. Используйте полученный код, чтобы сформировать QR-код.
+     * Получить код выдачи заказа
+     */
+    orderAPIOrderCodeGet(orderV1OrderCodeGetRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.orderAPIOrderCodeGetRaw({ orderV1OrderCodeGetRequest: orderV1OrderCodeGetRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
      * Создаёт заказ для покупателя и получателя в системе Ozon. Передайте вариант доставки из ответа метода [/v2/delivery/checkout](#operation/DeliveryCheckout).  В ответе могут быть не все отправления. Получите список всех отправлений по номеру заказа `order_number` методом: - [/v2/posting/fbo/list](#operation/PostingAPI_GetFboPostingList) — для схемы FBO; - [/v3/posting/fbs/list](#operation/PostingAPI_GetFbsPostingListV3) — для схемы FBS.  Значение параметра `delivery_schema` должно совпадать с тем, что вы передали в [/v2/delivery/checkout](#operation/DeliveryCheckout).
      * Создать заказ
      */

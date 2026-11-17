@@ -37,6 +37,7 @@ function V3FbsPostingProductExemplarInfoV3FromJSONTyped(json, ignoreDiscriminato
         'is_gtd_absent': json['is_gtd_absent'] == null ? undefined : json['is_gtd_absent'],
         'rnpt': json['rnpt'] == null ? undefined : json['rnpt'],
         'is_rnpt_absent': json['is_rnpt_absent'] == null ? undefined : json['is_rnpt_absent'],
+        'seal_number': json['seal_number'] == null ? undefined : json['seal_number'],
         'weight': json['weight'] == null ? undefined : json['weight'],
         'imei': json['imei'] == null ? undefined : json['imei'],
     };
@@ -52,6 +53,7 @@ function V3FbsPostingProductExemplarInfoV3ToJSON(value) {
         'is_gtd_absent': value['is_gtd_absent'],
         'rnpt': value['rnpt'],
         'is_rnpt_absent': value['is_rnpt_absent'],
+        'seal_number': value['seal_number'],
         'weight': value['weight'],
         'imei': value['imei'],
     };

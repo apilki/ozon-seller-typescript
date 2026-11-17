@@ -71,7 +71,9 @@ export interface PostingV4PostingFbsListResponsePostings {
      * - `ship_async` — собрать отправление;
      * - `ship_with_additional_info` — заполните дополнительную информацию методом [/v6/fbs/posting/product/exemplar/set](https://docs.ozon.ru/api/seller/#operation/PostingAPI_FbsPostingProductExemplarSetV6);
      * - `ship` — собрать отправление;
-     * - `update_cis` — изменить дополнительную информацию.
+     * - `update_cis` — изменить дополнительную информацию;
+     * - `edit_seal_number` — изменить номера пломб товаров в отправлении;
+     * - `set_seal_number` — указать номера пломб товаров в отправлении.
      *
      * @type {Array<string>}
      * @memberof PostingV4PostingFbsListResponsePostings

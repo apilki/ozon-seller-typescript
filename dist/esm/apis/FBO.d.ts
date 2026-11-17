@@ -191,10 +191,12 @@ export declare class FBO extends runtime.BaseAPI {
      */
     supplyOrderAPISupplyOrderStatusCounter(clientId: string, apiKey: string, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1SupplyOrderStatusCounterResponse>;
     /**
+     * Вы можете отправить не больше 300 запросов в час.
      * Обновить интервал поставки
      */
     supplyOrderAPIUpdateSupplyOrderTimeslotRaw(requestParameters: SupplyOrderAPIUpdateSupplyOrderTimeslotRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<V1UpdateSupplyOrderTimeslotResponse>>;
     /**
+     * Вы можете отправить не больше 300 запросов в час.
      * Обновить интервал поставки
      */
     supplyOrderAPIUpdateSupplyOrderTimeslot(clientId: string, apiKey: string, v1UpdateSupplyOrderTimeslotRequest: V1UpdateSupplyOrderTimeslotRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1UpdateSupplyOrderTimeslotResponse>;
@@ -209,22 +211,22 @@ export declare class FBO extends runtime.BaseAPI {
      */
     supplyOrderBundle(v1GetSupplyOrderBundleRequest: V1GetSupplyOrderBundleRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1GetSupplyOrderBundleResponse>;
     /**
-     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).
+     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).  Вы можете отправить не больше 1800 запросов в час.
      * Информация о заявке на поставку
      */
     supplyOrderGetRaw(requestParameters: SupplyOrderGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<V3SupplyOrderGetResponse>>;
     /**
-     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).
+     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).  Вы можете отправить не больше 1800 запросов в час.
      * Информация о заявке на поставку
      */
     supplyOrderGet(v3SupplyOrderGetRequest?: V3SupplyOrderGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V3SupplyOrderGetResponse>;
     /**
-     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).
+     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).  Вы можете отправить не больше 1800 запросов в час.
      * Список заявок на поставку на склад Ozon
      */
     supplyOrderListRaw(requestParameters: SupplyOrderListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<V3SupplyOrderListResponse>>;
     /**
-     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).
+     * Учитываются заявки с поставкой на конкретный склад и через [виртуальный распределительный центр (вРЦ)](https://seller-edu.ozon.ru/fbo/scheme-of-work/about#чем-отличаются-процессы-при-заявках-через-врц-и-напрямую-на-склад).  Вы можете отправить не больше 1800 запросов в час.
      * Список заявок на поставку на склад Ozon
      */
     supplyOrderList(v3SupplyOrderListRequest?: V3SupplyOrderListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V3SupplyOrderListResponse>;

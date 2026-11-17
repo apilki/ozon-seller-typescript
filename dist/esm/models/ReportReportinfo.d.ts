@@ -78,7 +78,9 @@ export interface ReportReportinfo {
      *   - `DECOMPENSATION_REPORT` — отчёт о декомпенсациях;
      *   - `MARKED_PRODUCTS_SALES` — отчёт по продажам маркированных товаров;
      *   - `SELLER_PLACEMENT_BY_PRODUCTS` — отчёт о стоимости размещения по товарам;
-     *   - `SELLER_PLACEMENT_BY_SUPPLIES` — отчёт о стоимости размещения по поставкам.
+     *   - `SELLER_PLACEMENT_BY_SUPPLIES` — отчёт о стоимости размещения по поставкам;
+     *   - `FINANCE_REALIZATION_NUMBER` — отчёт о реализации товаров;
+     *   - `FINANCE_REALIZATION_NUMBER_POSTING` — позаказный отчёт о реализации товаров.
      *
      * @type {string}
      * @memberof ReportReportinfo

@@ -34,6 +34,7 @@ export function PostingV4PostingFbsUnfulfilledListResponsePostingsProductsFromJS
         'price': json['price'] == null ? undefined : MoneyPostingMoneyFromJSON(json['price']),
         'product_color': json['product_color'] == null ? undefined : json['product_color'],
         'quantity': json['quantity'] == null ? undefined : json['quantity'],
+        'sealing_allowed': json['sealing_allowed'] == null ? undefined : json['sealing_allowed'],
         'sku': json['sku'] == null ? undefined : json['sku'],
         'weight': json['weight'] == null ? undefined : json['weight'],
     };
@@ -51,6 +52,7 @@ export function PostingV4PostingFbsUnfulfilledListResponsePostingsProductsToJSON
         'price': MoneyPostingMoneyToJSON(value['price']),
         'product_color': value['product_color'],
         'quantity': value['quantity'],
+        'sealing_allowed': value['sealing_allowed'],
         'sku': value['sku'],
         'weight': value['weight'],
     };

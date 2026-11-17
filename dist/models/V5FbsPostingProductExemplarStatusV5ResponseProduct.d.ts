@@ -28,6 +28,13 @@ export interface V5FbsPostingProductExemplarStatusV5ResponseProduct {
      * @memberof V5FbsPostingProductExemplarStatusV5ResponseProduct
      */
     product_id?: number;
+    /**
+     * `true`, если товар можно опломбировать.
+     *
+     * @type {boolean}
+     * @memberof V5FbsPostingProductExemplarStatusV5ResponseProduct
+     */
+    sealing_allowed?: boolean;
 }
 /**
  * Check if a given object implements the V5FbsPostingProductExemplarStatusV5ResponseProduct interface.

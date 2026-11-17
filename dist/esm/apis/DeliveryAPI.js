@@ -56,8 +56,9 @@ export class DeliveryAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Проверяет доступность доставки Ozon для покупателя. Не учитывает ограничения по сумме покупки, категории товаров и географии.
+     * <aside class=\"warning\"> Метод устаревает и будет отключён. </aside>  Проверяет доступность доставки Ozon для покупателя. Не учитывает ограничения по сумме покупки, категории товаров и географии.
      * Проверить доступность доставки для покупателя
+     * @deprecated
      */
     deliveryCheckRaw(requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -75,8 +76,9 @@ export class DeliveryAPI extends runtime.BaseAPI {
         });
     }
     /**
-     * Проверяет доступность доставки Ozon для покупателя. Не учитывает ограничения по сумме покупки, категории товаров и географии.
+     * <aside class=\"warning\"> Метод устаревает и будет отключён. </aside>  Проверяет доступность доставки Ozon для покупателя. Не учитывает ограничения по сумме покупки, категории товаров и географии.
      * Проверить доступность доставки для покупателя
+     * @deprecated
      */
     deliveryCheck(v1DeliveryCheckRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {

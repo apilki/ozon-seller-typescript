@@ -19,15 +19,12 @@ exports.V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnumFromJSON =
 exports.V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnumFromJSONTyped = V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnumFromJSONTyped;
 exports.V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnumToJSON = V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnumToJSON;
 /**
- * Тип скидки:
- *  - `PERCENT` — скидка в процентах;
- *  - `CURRENCY` — скидка в валюте.
+ * Тип скидки: `PERCENT` — скидка в процентах.
  *
  * @export
  */
 exports.V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnum = {
-    PERCENT: 'PERCENT',
-    CURRENCY: 'CURRENCY'
+    PERCENT: 'PERCENT'
 };
 function instanceOfV1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnum(value) {
     for (const key in exports.V1SellerActionsCreateMultiLevelDiscountRequestDiscountTypeEnum) {

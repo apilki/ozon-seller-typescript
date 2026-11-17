@@ -41,13 +41,15 @@ export declare class DeliveryAPI extends runtime.BaseAPI {
      */
     deliveryAPIDeliveryPointList(body?: object, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1DeliveryPointListResponse>;
     /**
-     * Проверяет доступность доставки Ozon для покупателя. Не учитывает ограничения по сумме покупки, категории товаров и географии.
+     * <aside class=\"warning\"> Метод устаревает и будет отключён. </aside>  Проверяет доступность доставки Ozon для покупателя. Не учитывает ограничения по сумме покупки, категории товаров и географии.
      * Проверить доступность доставки для покупателя
+     * @deprecated
      */
     deliveryCheckRaw(requestParameters: DeliveryCheckRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<V1DeliveryCheckResponse>>;
     /**
-     * Проверяет доступность доставки Ozon для покупателя. Не учитывает ограничения по сумме покупки, категории товаров и географии.
+     * <aside class=\"warning\"> Метод устаревает и будет отключён. </aside>  Проверяет доступность доставки Ozon для покупателя. Не учитывает ограничения по сумме покупки, категории товаров и географии.
      * Проверить доступность доставки для покупателя
+     * @deprecated
      */
     deliveryCheck(v1DeliveryCheckRequest?: V1DeliveryCheckRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<V1DeliveryCheckResponse>;
     /**

@@ -21,7 +21,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { V1CargoesCreateRequestToJSON, V1CargoesCreateResponseFromJSON, V1CargoesDeleteRequestToJSON, V1CargoesDeleteResponseFromJSON, V1CargoesDeleteStatusRequestToJSON, V1CargoesDeleteStatusResponseFromJSON, V1CargoesGetRequestToJSON, V1CargoesGetResponseFromJSON, V1CargoesLabelCreateRequestToJSON, V1CargoesLabelCreateResponseFromJSON, V1CargoesLabelGetRequestToJSON, V1CargoesLabelGetResponseFromJSON, V1CargoesRulesGetRequestToJSON, V1CargoesRulesGetResponseFromJSON, V1DraftClusterListRequestToJSON, V1DraftClusterListResponseFromJSON, V1DraftCreateCommonResponseFromJSON, V1DraftCrossdockCreateRequestToJSON, V1DraftDirectCreateRequestToJSON, V1DraftGetWarehouseFboListRequestToJSON, V1DraftGetWarehouseFboListResponseFromJSON, V1DraftMultiClusterCreateRequestToJSON, V1SupplyOrderCancelRequestToJSON, V1SupplyOrderCancelResponseFromJSON, V1SupplyOrderCancelStatusRequestToJSON, V1SupplyOrderCancelStatusResponseFromJSON, V1SupplyOrderContentUpdateRequestToJSON, V1SupplyOrderContentUpdateResponseFromJSON, V1SupplyOrderContentUpdateStatusRequestToJSON, V1SupplyOrderContentUpdateStatusResponseFromJSON, V1SupplyOrderContentUpdateValidationRequestToJSON, V1SupplyOrderContentUpdateValidationResponseFromJSON, V1WarehouseFboSellerListResponseFromJSON, V2CargoesCreateInfoV2RequestToJSON, V2CargoesCreateInfoV2ResponseFromJSON, V2DraftClusterListResponseFromJSON, V2DraftCreateInfoRequestToJSON, V2DraftCreateInfoResponseFromJSON, V2DraftSupplyCreateRequestToJSON, V2DraftSupplyCreateResponseFromJSON, V2DraftSupplyCreateStatusRequestToJSON, V2DraftSupplyCreateStatusResponseFromJSON, V2DraftTimeslotInfoRequestToJSON, V2DraftTimeslotInfoResponseFromJSON, } from '../models/index';
+import { CargoesV2CargoesDeleteRequestToJSON, CargoesV2CargoesDeleteResponseFromJSON, CargoesV2CargoesDeleteStatusRequestToJSON, CargoesV2CargoesDeleteStatusResponseFromJSON, CargoesV2CargoesGetRequestToJSON, CargoesV2CargoesGetResponseFromJSON, V1CargoesCreateRequestToJSON, V1CargoesCreateResponseFromJSON, V1CargoesDeleteRequestToJSON, V1CargoesDeleteResponseFromJSON, V1CargoesDeleteStatusRequestToJSON, V1CargoesDeleteStatusResponseFromJSON, V1CargoesGetRequestToJSON, V1CargoesGetResponseFromJSON, V1CargoesLabelCreateRequestToJSON, V1CargoesLabelCreateResponseFromJSON, V1CargoesLabelGetRequestToJSON, V1CargoesLabelGetResponseFromJSON, V1CargoesRulesGetRequestToJSON, V1CargoesRulesGetResponseFromJSON, V1DraftClusterListRequestToJSON, V1DraftClusterListResponseFromJSON, V1DraftCreateCommonResponseFromJSON, V1DraftCrossdockCreateRequestToJSON, V1DraftDirectCreateRequestToJSON, V1DraftGetWarehouseFboListRequestToJSON, V1DraftGetWarehouseFboListResponseFromJSON, V1DraftMultiClusterCreateRequestToJSON, V1SupplyOrderCancelRequestToJSON, V1SupplyOrderCancelResponseFromJSON, V1SupplyOrderCancelStatusRequestToJSON, V1SupplyOrderCancelStatusResponseFromJSON, V1SupplyOrderContentUpdateRequestToJSON, V1SupplyOrderContentUpdateResponseFromJSON, V1SupplyOrderContentUpdateStatusRequestToJSON, V1SupplyOrderContentUpdateStatusResponseFromJSON, V1SupplyOrderContentUpdateValidationRequestToJSON, V1SupplyOrderContentUpdateValidationResponseFromJSON, V1WarehouseFboSellerListResponseFromJSON, V2CargoesCreateInfoV2RequestToJSON, V2CargoesCreateInfoV2ResponseFromJSON, V2DraftClusterListResponseFromJSON, V2DraftCreateInfoRequestToJSON, V2DraftCreateInfoResponseFromJSON, V2DraftSupplyCreateRequestToJSON, V2DraftSupplyCreateResponseFromJSON, V2DraftSupplyCreateStatusRequestToJSON, V2DraftSupplyCreateStatusResponseFromJSON, V2DraftTimeslotInfoRequestToJSON, V2DraftTimeslotInfoResponseFromJSON, } from '../models/index';
 /**
  *
  */
@@ -296,6 +296,84 @@ export class FboSupplyRequest extends runtime.BaseAPI {
         });
     }
     /**
+     * Получить информацию о статусе удаления грузомест и транспортных грузомест
+     */
+    cargoesDeleteStatusV2Raw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['clientId'] == null) {
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling cargoesDeleteStatusV2().');
+            }
+            if (requestParameters['apiKey'] == null) {
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling cargoesDeleteStatusV2().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (requestParameters['clientId'] != null) {
+                headerParameters['Client-Id'] = String(requestParameters['clientId']);
+            }
+            if (requestParameters['apiKey'] != null) {
+                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
+            }
+            const response = yield this.request({
+                path: `/v2/cargoes/delete/status`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: CargoesV2CargoesDeleteStatusRequestToJSON(requestParameters['cargoesV2CargoesDeleteStatusRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => CargoesV2CargoesDeleteStatusResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Получить информацию о статусе удаления грузомест и транспортных грузомест
+     */
+    cargoesDeleteStatusV2(clientId, apiKey, cargoesV2CargoesDeleteStatusRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.cargoesDeleteStatusV2Raw({ clientId: clientId, apiKey: apiKey, cargoesV2CargoesDeleteStatusRequest: cargoesV2CargoesDeleteStatusRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
+     * Удалить грузоместа и транспортные грузоместа в заявке на поставку
+     */
+    cargoesDeleteV2Raw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['clientId'] == null) {
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling cargoesDeleteV2().');
+            }
+            if (requestParameters['apiKey'] == null) {
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling cargoesDeleteV2().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (requestParameters['clientId'] != null) {
+                headerParameters['Client-Id'] = String(requestParameters['clientId']);
+            }
+            if (requestParameters['apiKey'] != null) {
+                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
+            }
+            const response = yield this.request({
+                path: `/v2/cargoes/delete`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: CargoesV2CargoesDeleteRequestToJSON(requestParameters['cargoesV2CargoesDeleteRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => CargoesV2CargoesDeleteResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Удалить грузоместа и транспортные грузоместа в заявке на поставку
+     */
+    cargoesDeleteV2(clientId, apiKey, cargoesV2CargoesDeleteRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.cargoesDeleteV2Raw({ clientId: clientId, apiKey: apiKey, cargoesV2CargoesDeleteRequest: cargoesV2CargoesDeleteRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
      * Получить информацию о грузоместах
      */
     cargoesGetRaw(requestParameters, initOverrides) {
@@ -331,6 +409,45 @@ export class FboSupplyRequest extends runtime.BaseAPI {
     cargoesGet(clientId, apiKey, v1CargoesGetRequest, initOverrides) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield this.cargoesGetRaw({ clientId: clientId, apiKey: apiKey, v1CargoesGetRequest: v1CargoesGetRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
+    /**
+     * Получить информацию о грузоместах
+     */
+    cargoesGetV2Raw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['clientId'] == null) {
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling cargoesGetV2().');
+            }
+            if (requestParameters['apiKey'] == null) {
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling cargoesGetV2().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (requestParameters['clientId'] != null) {
+                headerParameters['Client-Id'] = String(requestParameters['clientId']);
+            }
+            if (requestParameters['apiKey'] != null) {
+                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
+            }
+            const response = yield this.request({
+                path: `/v2/cargoes/get`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: CargoesV2CargoesGetRequestToJSON(requestParameters['cargoesV2CargoesGetRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => CargoesV2CargoesGetResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * Получить информацию о грузоместах
+     */
+    cargoesGetV2(clientId, apiKey, cargoesV2CargoesGetRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.cargoesGetV2Raw({ clientId: clientId, apiKey: apiKey, cargoesV2CargoesGetRequest: cargoesV2CargoesGetRequest }, initOverrides);
             return yield response.value();
         });
     }

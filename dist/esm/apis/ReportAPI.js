@@ -21,11 +21,57 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import * as runtime from '../runtime';
-import { CommonCreateReportResponseFromJSON, ReportCreateCompanyPostingsReportRequestToJSON, ReportCreateCompanyProductsReportRequestToJSON, ReportCreateDiscountedResponseFromJSON, ReportCreateReportResponseFromJSON, ReportReportInfoRequestToJSON, ReportReportInfoResponseFromJSON, ReportReportListRequestToJSON, ReportReportListResponseFromJSON, V1CreatePlacementByProductsReportRequestToJSON, V1CreatePlacementByProductsReportResponseFromJSON, V1CreatePlacementBySuppliesReportRequestToJSON, V1CreatePlacementBySuppliesReportResponseFromJSON, V1CreateStockByWarehouseReportRequestToJSON, V1ReportMarkedProductsSalesCreateRequestToJSON, V2ReportReturnsCreateRequestToJSON, V2ReportReturnsCreateResponseFromJSON, V3FinanceCashFlowStatementListRequestToJSON, V3FinanceCashFlowStatementListResponseFromJSON, } from '../models/index';
+import { CommonCreateReportResponseFromJSON, ReportCreateCompanyPostingsReportRequestToJSON, ReportCreateCompanyProductsReportRequestToJSON, ReportCreateDiscountedResponseFromJSON, ReportCreateReportResponseFromJSON, ReportReportInfoRequestToJSON, ReportReportInfoResponseFromJSON, ReportReportListRequestToJSON, ReportReportListResponseFromJSON, ReportV1CreateCompanyFinanceRealizationPostingReportRequestToJSON, ReportV1CreateCompanyFinanceRealizationPostingReportResponseFromJSON, V1CreatePlacementByProductsReportRequestToJSON, V1CreatePlacementByProductsReportResponseFromJSON, V1CreatePlacementBySuppliesReportRequestToJSON, V1CreatePlacementBySuppliesReportResponseFromJSON, V1CreateStockByWarehouseReportRequestToJSON, V1ReportMarkedProductsSalesCreateRequestToJSON, V2ReportReturnsCreateRequestToJSON, V2ReportReturnsCreateResponseFromJSON, V3FinanceCashFlowStatementListRequestToJSON, V3FinanceCashFlowStatementListResponseFromJSON, } from '../models/index';
 /**
  *
  */
 export class ReportAPI extends runtime.BaseAPI {
+    /**
+     * <aside class=\"warning\"> 17 января 2027 года отключим метод. Переключитесь на <a href=\"#operation/ReportFinanceRealizationList\">/v1/report/finance/realization/list</a> и <a href=\"#operation/CreateFinanceRealizationNumberPostingReport\">/v1/report/finance/realization/number/posting/create</a>. </aside>  Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Не включает отмены и невыкупы. Отчёт доступен с настоящего времени по август 2023 года включительно.
+     * Получить позаказный отчёт о реализации товаров
+     * @deprecated
+     */
+    createCompanyFinanceRealizationPostingReportRaw(requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (requestParameters['clientId'] == null) {
+                throw new runtime.RequiredError('clientId', 'Required parameter "clientId" was null or undefined when calling createCompanyFinanceRealizationPostingReport().');
+            }
+            if (requestParameters['apiKey'] == null) {
+                throw new runtime.RequiredError('apiKey', 'Required parameter "apiKey" was null or undefined when calling createCompanyFinanceRealizationPostingReport().');
+            }
+            if (requestParameters['reportV1CreateCompanyFinanceRealizationPostingReportRequest'] == null) {
+                throw new runtime.RequiredError('reportV1CreateCompanyFinanceRealizationPostingReportRequest', 'Required parameter "reportV1CreateCompanyFinanceRealizationPostingReportRequest" was null or undefined when calling createCompanyFinanceRealizationPostingReport().');
+            }
+            const queryParameters = {};
+            const headerParameters = {};
+            headerParameters['Content-Type'] = 'application/json';
+            if (requestParameters['clientId'] != null) {
+                headerParameters['Client-Id'] = String(requestParameters['clientId']);
+            }
+            if (requestParameters['apiKey'] != null) {
+                headerParameters['Api-Key'] = String(requestParameters['apiKey']);
+            }
+            const response = yield this.request({
+                path: `/v1/report/realization/posting/create`,
+                method: 'POST',
+                headers: headerParameters,
+                query: queryParameters,
+                body: ReportV1CreateCompanyFinanceRealizationPostingReportRequestToJSON(requestParameters['reportV1CreateCompanyFinanceRealizationPostingReportRequest']),
+            }, initOverrides);
+            return new runtime.JSONApiResponse(response, (jsonValue) => ReportV1CreateCompanyFinanceRealizationPostingReportResponseFromJSON(jsonValue));
+        });
+    }
+    /**
+     * <aside class=\"warning\"> 17 января 2027 года отключим метод. Переключитесь на <a href=\"#operation/ReportFinanceRealizationList\">/v1/report/finance/realization/list</a> и <a href=\"#operation/CreateFinanceRealizationNumberPostingReport\">/v1/report/finance/realization/number/posting/create</a>. </aside>  Отчёт о реализации доставленных и возвращённых товаров с детализацией по каждому заказу. Не включает отмены и невыкупы. Отчёт доступен с настоящего времени по август 2023 года включительно.
+     * Получить позаказный отчёт о реализации товаров
+     * @deprecated
+     */
+    createCompanyFinanceRealizationPostingReport(clientId, apiKey, reportV1CreateCompanyFinanceRealizationPostingReportRequest, initOverrides) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.createCompanyFinanceRealizationPostingReportRaw({ clientId: clientId, apiKey: apiKey, reportV1CreateCompanyFinanceRealizationPostingReportRequest: reportV1CreateCompanyFinanceRealizationPostingReportRequest }, initOverrides);
+            return yield response.value();
+        });
+    }
     /**
      * В одном отчёте вы можете получить не больше 50 000 кодов маркировки. Чтобы получить остальные данные, уменьшите период формирования отчёта.
      * Сгенерировать отчёт по продажам товаров с маркировкой

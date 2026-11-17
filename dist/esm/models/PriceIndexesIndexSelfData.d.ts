@@ -9,6 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+import type { ProductV5ColorIndex } from './ProductV5ColorIndex';
 /**
  * Цена вашего товара на других площадках.
  * @export
@@ -27,6 +28,24 @@ export interface PriceIndexesIndexSelfData {
      * @memberof PriceIndexesIndexSelfData
      */
     min_price_currency?: string;
+    /**
+     * Минимальная цена товара на других площадках в валюте продавца.
+     * @type {number}
+     * @memberof PriceIndexesIndexSelfData
+     */
+    min_price_in_seller?: number;
+    /**
+     * Валюта продавца.
+     * @type {string}
+     * @memberof PriceIndexesIndexSelfData
+     */
+    min_price_in_seller_currency?: string;
+    /**
+     *
+     * @type {ProductV5ColorIndex}
+     * @memberof PriceIndexesIndexSelfData
+     */
+    price_index_color?: ProductV5ColorIndex;
     /**
      * Значение индекса цены.
      * @type {number}

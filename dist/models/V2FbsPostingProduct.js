@@ -17,6 +17,7 @@ exports.instanceOfV2FbsPostingProduct = instanceOfV2FbsPostingProduct;
 exports.V2FbsPostingProductFromJSON = V2FbsPostingProductFromJSON;
 exports.V2FbsPostingProductFromJSONTyped = V2FbsPostingProductFromJSONTyped;
 exports.V2FbsPostingProductToJSON = V2FbsPostingProductToJSON;
+const PostingV2FbsPostingProductExemplar_1 = require("./PostingV2FbsPostingProductExemplar");
 /**
  * Check if a given object implements the V2FbsPostingProduct interface.
  */
@@ -31,6 +32,7 @@ function V2FbsPostingProductFromJSONTyped(json, ignoreDiscriminator) {
         return json;
     }
     return {
+        'exemplars': json['exemplars'] == null ? undefined : (json['exemplars'].map(PostingV2FbsPostingProductExemplar_1.PostingV2FbsPostingProductExemplarFromJSON)),
         'name': json['name'] == null ? undefined : json['name'],
         'offer_id': json['offer_id'] == null ? undefined : json['offer_id'],
         'price': json['price'] == null ? undefined : json['price'],
@@ -43,6 +45,7 @@ function V2FbsPostingProductToJSON(value) {
         return value;
     }
     return {
+        'exemplars': value['exemplars'] == null ? undefined : (value['exemplars'].map(PostingV2FbsPostingProductExemplar_1.PostingV2FbsPostingProductExemplarToJSON)),
         'name': value['name'],
         'offer_id': value['offer_id'],
         'price': value['price'],

@@ -13,6 +13,7 @@
  */
 import { PriceIndexesIndexExternalDataFromJSON, PriceIndexesIndexExternalDataToJSON, } from './PriceIndexesIndexExternalData';
 import { PriceIndexesIndexSelfDataFromJSON, PriceIndexesIndexSelfDataToJSON, } from './PriceIndexesIndexSelfData';
+import { ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndexFromJSON, ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndexToJSON, } from './ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndex';
 import { PriceIndexesIndexOzonDataFromJSON, PriceIndexesIndexOzonDataToJSON, } from './PriceIndexesIndexOzonData';
 /**
  * @export
@@ -39,6 +40,7 @@ export function GetProductInfoPricesResponseItemPriceIndexesFromJSONTyped(json, 
     }
     return {
         'color_index': json['color_index'] == null ? undefined : json['color_index'],
+        'competitor_index_data': json['competitor_index_data'] == null ? undefined : ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndexFromJSON(json['competitor_index_data']),
         'external_index_data': json['external_index_data'] == null ? undefined : PriceIndexesIndexExternalDataFromJSON(json['external_index_data']),
         'ozon_index_data': json['ozon_index_data'] == null ? undefined : PriceIndexesIndexOzonDataFromJSON(json['ozon_index_data']),
         'self_marketplaces_index_data': json['self_marketplaces_index_data'] == null ? undefined : PriceIndexesIndexSelfDataFromJSON(json['self_marketplaces_index_data']),
@@ -50,6 +52,7 @@ export function GetProductInfoPricesResponseItemPriceIndexesToJSON(value) {
     }
     return {
         'color_index': value['color_index'],
+        'competitor_index_data': ProductV5GetProductInfoPricesV5ResponseItemPriceIndexesIndexToJSON(value['competitor_index_data']),
         'external_index_data': PriceIndexesIndexExternalDataToJSON(value['external_index_data']),
         'ozon_index_data': PriceIndexesIndexOzonDataToJSON(value['ozon_index_data']),
         'self_marketplaces_index_data': PriceIndexesIndexSelfDataToJSON(value['self_marketplaces_index_data']),

@@ -40,6 +40,7 @@ function PostingV4PostingFbsUnfulfilledListResponsePostingsProductsFromJSONTyped
         'price': json['price'] == null ? undefined : (0, MoneyPostingMoney_1.MoneyPostingMoneyFromJSON)(json['price']),
         'product_color': json['product_color'] == null ? undefined : json['product_color'],
         'quantity': json['quantity'] == null ? undefined : json['quantity'],
+        'sealing_allowed': json['sealing_allowed'] == null ? undefined : json['sealing_allowed'],
         'sku': json['sku'] == null ? undefined : json['sku'],
         'weight': json['weight'] == null ? undefined : json['weight'],
     };
@@ -57,6 +58,7 @@ function PostingV4PostingFbsUnfulfilledListResponsePostingsProductsToJSON(value)
         'price': (0, MoneyPostingMoney_1.MoneyPostingMoneyToJSON)(value['price']),
         'product_color': value['product_color'],
         'quantity': value['quantity'],
+        'sealing_allowed': value['sealing_allowed'],
         'sku': value['sku'],
         'weight': value['weight'],
     };

@@ -30,6 +30,12 @@ export interface FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProduct {
      */
     delivery?: FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProductDelivery;
     /**
+     * Количество товара.
+     * @type {number}
+     * @memberof FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProduct
+     */
+    quantity?: number;
+    /**
      * Идентификатор товара в системе Ozon — SKU.
      * @type {number}
      * @memberof FinanceV1GetFinanceAccrualByDayResponseAccrualPostingProduct
