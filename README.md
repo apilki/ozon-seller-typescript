@@ -91,7 +91,10 @@ try {
 
 ## Postman-коллекция
 
-Готовая Postman Collection v2.1 (463 запроса) — отдельным артефактом: `apilki/ozon-seller-postman`.
+Готовая Postman Collection v2.1 (482 запроса — все операции спецификации) — отдельный репозиторий
+[apilki/ozon-seller-postman](https://github.com/apilki/ozon-seller-postman). Импортируйте
+`postman/collection.json` и заполните переменные коллекции `clientId` и `apiKey` — авторизация
+уже подставлена во все запросы.
 
 ## Языки
 
